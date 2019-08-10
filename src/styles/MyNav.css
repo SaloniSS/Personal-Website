@@ -1,0 +1,18 @@
+.navbar-brand {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+}
+
+.bar-item {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.bar-item:hover {
+    color:darkorange;
+}

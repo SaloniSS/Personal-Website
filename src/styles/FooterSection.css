@@ -1,0 +1,35 @@
+/* /src/styles/FooterSection.css */
+h2 {
+    font-family: Raleway, sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    letter-spacing: 5px;
+    display: block;
+    text-transform: uppercase;
+}
+h4 {
+    font-family: Raleway, "Times New Roman", Times, sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    color: grey;
+}
+.footer-section {
+    background-color: #212529;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.row-padding {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.icon-box {
+    border-style: solid;
+    border-radius: 5px;
+    padding: 12px 5px 5px 5px;
+    height: 75px;
+    width: 75px;
+    color: white;
+}
+.icon-box:hover {
+    color: lightgrey;
+}

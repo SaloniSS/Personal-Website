@@ -1,0 +1,31 @@
+/* /src/styles/ContactSection.css */
+h2 {
+    font-family: Raleway, sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    letter-spacing: 5px;
+    display: block;
+    text-transform: uppercase;
+}
+h4 {
+    font-family: Raleway, "Times New Roman", Times, sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    color: grey;
+}
+.card-title {
+    color: black;
+    font-size: 22px;
+}
+.card-text {
+    color: grey;
+}
+.contact-section {
+    background-color: #f5f5f5;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.row-padding {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}

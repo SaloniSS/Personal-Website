@@ -1,0 +1,57 @@
+/* /src/styles/ProjectsSection.js*/
+h2 {
+    font-family: Raleway, sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    letter-spacing: 5px;
+    display: block;
+    text-transform: uppercase;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h4 {
+    font-family: Raleway, "Times New Roman", Times, sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    color: grey;
+}
+
+.card-title {
+    color: black;
+    font-size: 22px;
+}
+
+.Projects-section {
+    background-color: #f5f5f5;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.project-card {
+    height: 300px;
+}
+
+.row-padding {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+i {
+    padding-bottom: 20px;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+    background-color: #f5f5f5;
+    
+}
+
+.card-padding {
+    padding: 15px 15px 15px 15px;
+}
