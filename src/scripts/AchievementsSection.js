@@ -24,26 +24,28 @@ class AchievementsSection extends Component {
                             </Col>
                         </Row>
                         <Row className="row-padding">
-                            <AchievementCard
+                            <AwardsCard
                                 icon="fa fa-trophy"
-                                title="Cyber Fast-Track Game Quarter-Finalist, SANS Institute"
-                                text="Placed among the top 2,400 quarter-finalists from more than 13,000 participants
-                                nationally and top 9 from 62 participants from The University of Texas at Dallas.
-                                Based on cybersecurity challenges on Forensics, Intrusion detection, Security
-                                operations, System and network penetration testing, and Application penetration
-                                testing."/>
+                                title="National Quarter-Finalist"
+                                org="Cyber Fast-Track Game, SANS Institute"
+                                position="Placed among the top 2,400 quarter-finalists from more than 13,000 participants
+                                nationally and top 9 from 62 participants from The University of Texas at Dallas."
+                                description = "Based on cybersecurity challenges on Forensics, Intrusion detection, Security operations, System and network penetration testing, and Application penetration testing."/>
                             <AchievementCard
                                 icon="fa fa-university"
-                                title="Collegium V Honors Program, Hobson Wildenthal Honors College, The University of Texas at Dallas"
+                                title="Collegium V Honors Program"
+                                org="Hobson Wildenthal Honors College, The University of Texas at Dallas"
                                 text="A selective honors program based on high school achievements, standardized
-                                test scores, personal statements and letters of recommendation. Activities include:
-                                Enroll in challenging classes with intensive coursework, participate in roundtables,
-                                 volunteer at events and attend performing arts events."/>
+                                test scores, personal statements and letters of recommendation."
+                                activities="Activities include: Enroll in challenging classes with intensive coursework, 
+                                participate in roundtables, volunteer at events and attend performing arts events."/>
                             <AchievementCard
                                 icon="fa fa-university"
-                                title="Academic Excellence Scholar, The University of Texas at Dallas"
-                                text="Received full tuition scholarship along with $1000 stipend per semester based on
-                                high school achievements, standardized test scores and personal statements."/>
+                                title="Academic Excellence Scholar"
+                                org="The University of Texas at Dallas"
+                                text="Received full tuition scholarship along with $1000 stipend per semester based on 
+                                high school achievements, standardized test scores, personal statements and 
+                                letters of recommendation."/>
                         </Row>
                     </Container>
                 </div>
@@ -67,7 +69,25 @@ function AchievementCard(props) {
                 <CardBody>
                     <i className={props.icon}></i>
                     <CardTitle>{props.title}</CardTitle>
+                    <CardTitle>{props.org}</CardTitle>
                     <CardText>{props.text}</CardText>
+                    <CardText>{props.activities}</CardText>
+                </CardBody>
+            </Card>
+        </Col>
+    );
+}
+
+function AwardsCard(props) {
+    return (
+        <Col sm={{ size: 4 }}>
+            <Card className="achievement-card">
+                <CardBody>
+                    <i className={props.icon}></i>
+                    <CardTitle>{props.title}</CardTitle>
+                    <CardTitle>{props.org}</CardTitle>
+                    <CardText>{props.position}</CardText>
+                    <CardText>{props.description}</CardText>
                 </CardBody>
             </Card>
         </Col>
