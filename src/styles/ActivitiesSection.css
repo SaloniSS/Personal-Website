@@ -28,3 +28,25 @@ h4 {
     padding-top: 25px;
     padding-bottom: 25px;
 }
+
+.activities-card {
+    height: 200px;
+}
+
+.card-body {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.row-padding {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+i {
+    padding-bottom: 20px;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}

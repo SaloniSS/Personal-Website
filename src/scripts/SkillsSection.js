@@ -15,7 +15,7 @@ import 'font-awesome/css/font-awesome.min.css';
 class SkillsSection extends Component {
     render() {
         return (
-            <div className="skill-section">
+            <div className="skills-section">
                 <div className="block-padding grey-section">
                     <Container>
                         <Row className="row-padding">

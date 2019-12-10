@@ -94,7 +94,7 @@ function ProjectCard(props) {
     return (
         <Col sm={{ size: 4 }} className="card-padding">
             <a href={props.link} target="_blank">
-                <Card className="projects-card">
+                <Card className="project-card">
                     <CardBody>
                         <CardTitle>{props.title}</CardTitle>
                         <CardText>{props.organization}</CardText>
@@ -110,9 +110,9 @@ function ProjectCard(props) {
 
 function WinningProjectCard(props) {
     return (
-        <Col sm={{ size: 4 }}>
+        <Col sm={{ size: 4 }}  className="card-padding">
             <a href={props.link} target="_blank">
-                <Card className="projects-card">
+                <Card className="project-card">
                     <CardBody>
                         <CardTitle>{props.title}</CardTitle>
                         <CardTitle>{props.organization}</CardTitle>
