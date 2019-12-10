@@ -54,7 +54,7 @@ function SkillCardTitle(props) {
 
 function SkillCard(props) {
     return (
-        <Col sm={{ size: 3 }}>
+        <Col sm={{ size: 3 }} className="card-padding">
             <Card className="skills-card">
                 <CardBody>
                     <CardTitle>{props.title}</CardTitle>

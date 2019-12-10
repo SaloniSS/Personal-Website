@@ -64,7 +64,7 @@ function AchievementsCardTitle(props) {
 
 function AchievementCard(props) {
     return (
-        <Col sm={{ size: 4 }}>
+        <Col sm={{ size: 4 }} className="card-padding">
             <Card className="achievement-card">
                 <CardBody>
                     <i className={props.icon}></i>
@@ -80,7 +80,7 @@ function AchievementCard(props) {
 
 function AwardsCard(props) {
     return (
-        <Col sm={{ size: 4 }}>
+        <Col sm={{ size: 4 }} className="card-padding">
             <Card className="achievement-card">
                 <CardBody>
                     <i className={props.icon}></i>

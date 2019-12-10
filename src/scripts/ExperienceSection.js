@@ -70,7 +70,7 @@ function ExperienceCardTitle(props) {
 
 function ExperienceCard(props) {
     return (
-        <Col sm={{ size: 4 }}>
+        <Col sm={{ size: 4 }} className="card-padding">
             <Card className="about-card">
                 <CardBody>
                     <i className={props.icon}></i>
@@ -86,7 +86,7 @@ function ExperienceCard(props) {
 
 function EducationCard(props){
     return (
-        <Col sm={{ size: 4 }}>
+        <Col sm={{ size: 4 }} className="card-padding">
             <Card className="about-card">
                 <CardBody>
                     <i className={props.icon}></i>

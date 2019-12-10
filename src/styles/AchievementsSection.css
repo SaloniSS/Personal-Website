@@ -29,3 +29,7 @@ h4 {
     padding-top: 25px;
     padding-bottom: 25px;
 }
+
+.card-padding {
+    padding: 15px 15px 15px 15px;
+}
