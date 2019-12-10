@@ -26,16 +26,16 @@ class SkillsSection extends Component {
                         <Row className="row-padding">
                             <SkillCard
                                 title="Computer Languages"
-                                text="Java, C++, HTML, CSS, JavaScript, MIPS Assembly"/>
+                                text="Java, JavaScript, Python, C++, HTML, CSS"/>
                             <SkillCard
                                 title="Frameworks & Libraries"
-                                text="React, Sass, Alexa Voice UI"/>
+                                text="React Native, React, Sass, NLTK"/>
                             <SkillCard
-                                title="Technologies"
-                                text="GIT, AWS Lambda, SnapChat Lens"/>
+                                title="Back End Technologies"
+                                text="Firebase, AWS, GCP"/>
                             <SkillCard
-                                title="Stacks"
-                                text="Android App Development, Web Front End Development"/>
+                                title="Other Technologies"
+                                text="GIT, DialogFlow, Alexa Voice UI"/>
                         </Row>
                     </Container>
                 </div>

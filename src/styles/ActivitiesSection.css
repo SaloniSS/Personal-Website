@@ -1,3 +1,4 @@
+/* /src/styles/AchievementsSection.css */
 h2 {
     font-family: Raleway, sans-serif;
     font-weight: 800;
@@ -6,29 +7,24 @@ h2 {
     display: block;
     text-transform: uppercase;
 }
-
 h4 {
     font-family: Raleway, "Times New Roman", Times, sans-serif;
     font-style: normal;
     font-size: 18px;
     color: grey;
 }
-
-.about-section {
-    background-color: #f5f5f5;
+.card-title {
+    color: black;
+    font-size: 22px;
+}
+.card-text {
+    color: grey;
+}
+.activities-section {
     padding-top: 50px;
     padding-bottom: 50px;
 }
-
-.about-card {
-    height: 400px;
-}
-
 .row-padding {
     padding-top: 25px;
     padding-bottom: 25px;
-}
-
-i {
-    padding-bottom: 20px;
 }

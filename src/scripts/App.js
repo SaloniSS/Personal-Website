@@ -9,6 +9,8 @@ import ContactSection from './ContactSection';
 import FooterSection from './FooterSection';
 import AchievementsSection from "./AchievementsSection";
 import SkillsSection from "./SkillsSection";
+import ExperienceSection from  './ExperienceSection';
+import ActivitiesSection from './ActivitiesSection';
 
 class App extends Component {
     name = "Saloni Shivdasani";
@@ -26,9 +28,11 @@ class App extends Component {
                     <HeaderSection name={this.name}/>
                 </header>
                 <AboutSection/>
+                <ExperienceSection/>
                 <SkillsSection/>
                 <ProjectsSection github_username={this.github_username}/>
                 <AchievementsSection/>
+                <ActivitiesSection/>
                 <ContactSection/>
                 <FooterSection linkedin={this.linkedin} github={this.github}
                                devpost={this.devpost} twitter={this.twitter}/>

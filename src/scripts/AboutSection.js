@@ -26,33 +26,6 @@ class AboutSection extends Component {
                                 <AboutCardContent/>
                             </Col>
                         </Row>
-                        <Row className="row-padding">
-                            <EducationCard
-                                icon="fa fa-university"
-                                title="Education"
-                                date = "Graduating December 2021"
-                                degree="BSc"
-                                major="Software Engineering"
-                                university="The University of Texas at Dallas"
-                                concentration="Information Assurance"
-                                />
-                            <ExperienceCard
-                                icon="fa fa-briefcase"
-                                position="Logistics Lead"
-                                employer="The University of Texas at Dallas"
-                                date = "March 2019 - August 2019"
-                                description="Responsible for planning, coordination, execution and supervision of conferences,
-                                workshops,and summer camps held on campus as a part of the Office for Computer Science
-                                Education and Outreach"/>
-                            <ExperienceCard
-                                icon="fa fa-briefcase"
-                                position="Computer Science Instructor"
-                                employer="The University of Texas at Dallas"
-                                date = "February 2019 - August 2019"
-                                description="Conducted private tutoring and coding club sessions for students from elementary
-                                school to high school in topics of programming languages and introductory computer
-                                science principles as a part of the Office for Computer Science Education and Outreach"/>
-                        </Row>
                     </Container>
                 </div>
             </div>
@@ -79,38 +52,6 @@ function AboutCardContent(props) {
                 I am inspired by the impact of computing on society.
             </h4>
         </div>
-    );
-}
-
-function ExperienceCard(props) {
-    return (
-        <Col sm={{ size: 4 }}>
-            <Card className="about-card">
-                <CardBody>
-                    <i className={props.icon}></i>
-                    <CardTitle>{props.position}</CardTitle>
-                    <CardTitle>{props.employer}</CardTitle>
-                    <CardText>{props.date}</CardText>
-                    <CardText>{props.description}</CardText>
-                </CardBody>
-            </Card>
-        </Col>
-    );
-}
-
-function EducationCard(props){
-    return (
-        <Col sm={{ size: 4 }}>
-            <Card className="about-card">
-                <CardBody>
-                    <i className={props.icon}></i>
-                    <CardTitle>{props.degree} , {props.major}</CardTitle>
-                    <CardTitle>{props.university}</CardTitle>
-                    <CardText>{props.date}</CardText>
-                    <CardText>Concentration : {props.concentration}</CardText>
-                </CardBody>
-            </Card>
-        </Col>
     );
 }
 
