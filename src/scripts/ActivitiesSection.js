@@ -28,7 +28,14 @@ class ActivitiesSection extends Component {
                                 title="Technical Lead - Cloud"
                                 org="Google Developer Students Club, UTD Chapter"
                                 date="December 2019 - Present"
-                                //text="Mentoring computer science freshmen in the development of academic, social and personal skills necessary to succeed in college"
+                                //text="Hosting workshops on campus on topics of Google Cloud Platform"
+                                //text2="Leading and managing a team of backend developers for the Google Solution Challenge"
+                            />
+                            <ActivitiesCard
+                                title="Project Member, Forge"
+                                org="Institute of Electrical and Electronics Engineers, UTD Chapter"
+                                date="August 2018 - Present"
+                                text="Developing the back-end services for software products used on campus"
                             />
                             <ActivitiesCard
                                 title="Mentor"
@@ -54,13 +61,14 @@ function ActivitiesCardTitle(props) {
 
 function ActivitiesCard(props) {
     return (
-        <Col sm={{ size: 6 }} className="card-padding">
+        <Col sm={{ size: 4 }} className="card-padding">
             <Card className="achievement-card">
                 <CardBody>
                     <CardTitle>{props.org}</CardTitle>
                     <CardTitle>{props.title}</CardTitle>
                     <CardText>{props.date}</CardText>
                     <CardText>{props.text}</CardText>
+                    <CardText>{props.text2}</CardText>
                 </CardBody>
             </Card>
         </Col>
