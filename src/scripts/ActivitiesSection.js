@@ -28,14 +28,16 @@ class ActivitiesSection extends Component {
                                 title="Technical Lead - Cloud"
                                 org="Google Developer Students Club, UTD Chapter"
                                 date="December 2019 - Present"
-                                //text="Hosting workshops on campus on topics of Google Cloud Platform"
-                                //text2="Leading and managing a team of backend developers for the Google Solution Challenge"
+                                text="Hosting workshops on campus on topics of Google Cloud Platform and backend developement"
+                                text2="Leading and managing teams of undergraduate and graduate students 
+                                to develop projects in a team environment for the Google Solution Challenge 
+                                while enforcing Agile software development"
                             />
                             <ActivitiesCard
-                                title="Project Member, Forge"
+                                title="IT Committee - Project EventBoard Developer"
                                 org="Institute of Electrical and Electronics Engineers, UTD Chapter"
                                 date="August 2018 - Present"
-                                text="Developing the back-end services for software products used on campus"
+                                text="Developing the back-end services for an interactive digital signage system for UTD MakerSpace"
                             />
                             <ActivitiesCard
                                 title="Mentor"

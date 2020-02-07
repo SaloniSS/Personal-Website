@@ -72,7 +72,7 @@ class ProjectsSection extends Component {
                                 organization="TAMUhack 2019"
                                 date="February 2019"
                                 description="Designed an Android mobile application which helps patients keep track of mood changes and medication and connect their data to their doctor as a team of four"
-                                contribution="Implemented a password-less login that used pre-verified user fingerprint. Developed an emotion-detecting function which detects the users’ mood from their selfie"
+                                contribution="Implemented a password-less login that used pre-verified user fingerprint using Firebase. Developed an emotion-detecting function which detects the users’ mood from their selfie using Microsoft Azure"
                             />
                         </Row>
                     </Container>
@@ -97,7 +97,7 @@ function ProjectCard(props) {
                 <Card className="project-card">
                     <CardBody>
                         <CardTitle>{props.title}</CardTitle>
-                        <CardText>{props.organization}</CardText>
+                        <CardTitle>{props.organization}</CardTitle>
                         <CardText>{props.date}</CardText>
                         <CardText>{props.description}</CardText>
                         <CardText>{props.contribution}</CardText>
@@ -117,7 +117,7 @@ function WinningProjectCard(props) {
                         <CardTitle>{props.title}</CardTitle>
                         <CardTitle>{props.organization}</CardTitle>
                         <CardText>{props.date}</CardText>
-                        <CardText>Winner : {props.award}</CardText>
+                        <CardText> <u>Winner : {props.award}</u></CardText>
                         <CardText>{props.description}</CardText>
                         <CardText>{props.contribution}</CardText>
                     </CardBody>

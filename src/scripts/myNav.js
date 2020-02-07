@@ -43,7 +43,7 @@ class MyNav extends Component {
                                 <NavLink className="bar-item" href={this.state.github} target="_blank">GitHub</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="bar-item" href="https://drive.google.com/file/d/1IypaqbXzvvHLGm7qul9EQg5jN-Tho_Lc/view?usp=sharing" target="_blank">Resume</NavLink>
+                                <NavLink className="bar-item" href="http://bit.ly/saloni-resume" target="_blank">Résume</NavLink>
                             </NavItem>
                         </Nav>
                     </Collapse>

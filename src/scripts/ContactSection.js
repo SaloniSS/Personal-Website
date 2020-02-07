@@ -41,6 +41,7 @@ function ContactSectionContent(props) {
     return (
         <div>
             <h4> Email : saloni.shivdasani@utdallas.edu </h4>
+            <h4> Alternate Email : salonishivdasani@gmail.com </h4>
         </div>
     );
 }

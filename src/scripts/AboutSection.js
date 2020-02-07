@@ -45,8 +45,9 @@ function AboutCardContent(props) {
     return (
         <div>
             <h4>
-                I am a sophomore at The University of Texas at Dallas, and I am currently majoring in Software Engineering.
-                I also have experience in front end web development, Android app development, and cybersecurity.
+                I am a junior at The University of Texas at Dallas, and I am currently majoring in 
+                Software Engineering with a concentration in Information Assurance.
+                I also have experience in full stack web development, Android app development, and cybersecurity.
                 I hope to find opportunities where I can gain exposure to algorithm and project design.
                 My ultimate aim is to develop futuristic products for users because
                 I am inspired by the impact of computing on society.
