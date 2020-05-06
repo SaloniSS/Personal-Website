@@ -1,5 +1,5 @@
 // /src/components/ContactSection.js
-import React, { Component } from 'react';
+import React from 'react';
 import {
     Container,
     Row,
@@ -9,48 +9,42 @@ import '../styles/FooterSection.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 
-class FooterSection extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            linkedin: props.linkedin,
-            github: props.github,
-            devpost: props.devpost,
-            twitter: props.twitter
-        };
-    }
-    render() {
-        return (
-            <div className="footer-section">
-                <div className="block-padding grey-section">
-                    <Container>
-                        <Row className="row-padding">
-                            <Col sm={{ offset: 4, size: 1 }}>
-                                <a href={this.state.linkedin} target="_blank" rel="noopener noreferrer">
-                                    <i className="fa fa-linkedin fa-3x icon-box"></i>
-                                </a>
-                            </Col>
-                            <Col sm={{ size: 1 }}>
-                                <a href={this.state.github} target="_blank" rel="noopener noreferrer">
-                                    <i className="fa fa-github fa-3x icon-box"></i>
-                                </a>
-                            </Col>
-                            <Col sm={{ size: 1 }}>
-                                <a href={this.state.twitter} target="_blank" rel="noopener noreferrer">
-                                    <i className="fa fa-twitter fa-3x icon-box"></i>
-                                </a>
-                            </Col>
-                            <Col sm={{ size: 1 }}>
-                                <a href={this.state.devpost} target="_blank" rel="noopener noreferrer">
-                                    <i className="fa fa-code fa-3x icon-box"></i>
-                                </a>
-                            </Col>
-                        </Row>
-                    </Container>
-                </div>
+const FooterSection = (props) => {
+    const linkedin = props.linkedin;
+    const github = props.github;
+    const devpost = props.devpost;
+    const resume = props.resume;
+
+    return (
+        <div className="footer-section">
+            <div className="block-padding grey-section">
+                <Container>
+                    <Row className="row-padding">
+                        <Col sm={{ offset: 4, size: 1 }}>
+                            <a href={linkedin} target="_blank" rel="noopener noreferrer">
+                                <i className="fa fa-linkedin fa-3x icon-box"></i>
+                            </a>
+                        </Col>
+                        <Col sm={{ size: 1 }}>
+                            <a href={github} target="_blank" rel="noopener noreferrer">
+                                <i className="fa fa-github fa-3x icon-box"></i>
+                            </a>
+                        </Col>
+                        <Col sm={{ size: 1 }}>
+                            <a href={devpost} target="_blank" rel="noopener noreferrer">
+                                <i className="fa fa-code fa-3x icon-box"></i>
+                            </a>
+                        </Col>
+                        <Col sm={{ size: 1 }}>
+                            <a href={resume} target="_blank" rel="noopener noreferrer">
+                                <i className="fa fa-clipboard fa-3x icon-box"></i>
+                            </a>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
-        )
-    }
-}
+        </div>
+    );
+};
 
 export default FooterSection;

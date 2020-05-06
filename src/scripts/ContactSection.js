@@ -9,41 +9,28 @@ import '../styles/ContactSection.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 
-class ContactSection extends Component {
-    render() {
-        return (
-            <div className="contact-section">
-                <div className="block-padding grey-section">
-                    <Container>
-                        <Row className="row-padding">
-                            <Col sm={{ size: 6, offset: 3 }}>
-                                <ContactSectionTitle />
-                                <hr></hr>
-                                <ContactSectionContent />
-                            </Col>
-                        </Row>
-                    </Container>
-                </div>
+const ContactSection = () => {
+    
+    return (
+        <div className="contact-section">
+            <div className="block-padding grey-section">
+                <Container>
+                    <Row className="row-padding">
+                        <Col sm={{ size: 6, offset: 3 }}>
+                            <div>
+                                <h2>contact me</h2>
+                            </div>
+                            <hr></hr>
+                                <div>
+                                    <h4> Email : saloni.shivdasani@utdallas.edu </h4>
+                                    <h4> Alternate Email : salonishivdasani@gmail.com </h4>
+                                </div>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
-        )
-    }
-}
-
-function ContactSectionTitle(props) {
-    return (
-        <div>
-            <h2>contact me</h2>
         </div>
     );
-}
-
-function ContactSectionContent(props) {
-    return (
-        <div>
-            <h4> Email : saloni.shivdasani@utdallas.edu </h4>
-            <h4> Alternate Email : salonishivdasani@gmail.com </h4>
-        </div>
-    );
-}
+};
 
 export default ContactSection;
