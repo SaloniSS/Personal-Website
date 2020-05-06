@@ -26,22 +26,22 @@ class FooterSection extends Component {
                     <Container>
                         <Row className="row-padding">
                             <Col sm={{ offset: 4, size: 1 }}>
-                                <a href={this.state.linkedin} target="_blank">
+                                <a href={this.state.linkedin} target="_blank" rel="noopener noreferrer">
                                     <i className="fa fa-linkedin fa-3x icon-box"></i>
                                 </a>
                             </Col>
                             <Col sm={{ size: 1 }}>
-                                <a href={this.state.github} target="_blank">
+                                <a href={this.state.github} target="_blank" rel="noopener noreferrer">
                                     <i className="fa fa-github fa-3x icon-box"></i>
                                 </a>
                             </Col>
                             <Col sm={{ size: 1 }}>
-                                <a href={this.state.twitter} target="_blank">
+                                <a href={this.state.twitter} target="_blank" rel="noopener noreferrer">
                                     <i className="fa fa-twitter fa-3x icon-box"></i>
                                 </a>
                             </Col>
                             <Col sm={{ size: 1 }}>
-                                <a href={this.state.devpost} target="_blank">
+                                <a href={this.state.devpost} target="_blank" rel="noopener noreferrer">
                                     <i className="fa fa-code fa-3x icon-box"></i>
                                 </a>
                             </Col>

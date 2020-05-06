@@ -3,15 +3,10 @@ import React, { Component } from 'react';
 import {
     Container,
     Row,
-    Col,
-    Card,
-    CardText,
-    CardBody,
-    CardTitle } from 'reactstrap';
+    Col } from 'reactstrap';
 import '../styles/AboutSection.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
-import CardDeck from "reactstrap/es/CardDeck";
 
 class AboutSection extends Component {
     render() {

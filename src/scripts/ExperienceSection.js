@@ -11,7 +11,6 @@ import {
 import '../styles/ExperienceSection.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
-import CardDeck from "reactstrap/es/CardDeck";
 
 class ExperienceSection extends Component {
     render() {

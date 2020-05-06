@@ -83,7 +83,7 @@ function ProjectsLink() {
 function WinningProjectCard(props) {
     return (
         <Col sm={{ size: 4 }}  className="card-padding">
-            <a href={props.link} target="_blank">
+            <a href={props.link} target="_blank" rel="noopener noreferrer">
                 <Card className="project-card">
                     <CardBody>
                         <CardTitle>{props.title}</CardTitle>
