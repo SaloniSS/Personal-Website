@@ -34,10 +34,9 @@ class ActivitiesSection extends Component {
                                 while enforcing Agile software development"
                             />
                             <ActivitiesCard
-                                title="IT Committee - Project EventBoard Developer"
-                                org="Institute of Electrical and Electronics Engineers, UTD Chapter"
-                                date="August 2018 - Present"
-                                text="Developing the back-end services for an interactive digital signage system for UTD MakerSpace"
+                                title="Event Planner"
+                                org="Women Mentoring Women in Engineering, UTD Chapter"
+                                date="May 2020 - Present"
                             />
                             <ActivitiesCard
                                 title="Mentor"

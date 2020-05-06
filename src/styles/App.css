@@ -13,7 +13,7 @@
 }
 
 .Header-background {
-    background-image: url(../data/cover.jpg);
+    background-image: url(../data/black_cover.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

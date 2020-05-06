@@ -28,7 +28,7 @@ class ExperienceSection extends Component {
                             <EducationCard
                                 icon="fa fa-university"
                                 title="Education"
-                                date = "Graduating December 2021"
+                                date = "Graduating May 2021"
                                 degree="BSc"
                                 major="Software Engineering"
                                 university="The University of Texas at Dallas"

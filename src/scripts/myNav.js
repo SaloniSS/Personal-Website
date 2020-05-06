@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import {
     Collapse,
     Navbar,
@@ -19,7 +20,8 @@ class MyNav extends Component {
             isOpen: false,
             name: props.name,
             linkedin: props.linkedin,
-            github: props.github
+            github: props.github,
+            devpost: props.devpost
         };
     }
     toggle() {
@@ -43,7 +45,15 @@ class MyNav extends Component {
                                 <NavLink className="bar-item" href={this.state.github} target="_blank">GitHub</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="bar-item" href="http://bit.ly/saloni-resume" target="_blank">Résume</NavLink>
+                                <NavLink className="bar-item" href={this.state.devpost} target="_blank">Portfolio</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink className="bar-item" href="https://bit.ly/resume-saloni" target="_blank">Résume</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <Link to ='/projects' >
+                                    <NavLink className="bar-item" href="" target="_blank">Projects</NavLink>
+                                </Link>
                             </NavItem>
                         </Nav>
                     </Collapse>

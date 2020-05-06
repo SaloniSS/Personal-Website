@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router , Route , Redirect , Switch} from 'react-router-dom';
 import '../styles/App.css';
 
 import MyNav from './myNav';
-import HeaderSection from './HeaderSection';
-import AboutSection from './AboutSection';
-import ProjectsSection from './ProjectsSection';
-import ContactSection from './ContactSection';
 import FooterSection from './FooterSection';
-import AchievementsSection from "./AchievementsSection";
-import SkillsSection from "./SkillsSection";
-import ExperienceSection from  './ExperienceSection';
-import ActivitiesSection from './ActivitiesSection';
+import HomePage from './HomePage';
+import ProjectsPages from './ProjectsPage';
 
 class App extends Component {
     name = "Saloni Shivdasani";
@@ -18,24 +13,25 @@ class App extends Component {
     github = "http://github.com/SaloniSS";
     github_username = "SaloniSS";
     devpost = "http://devpost.com/SaloniS";
-    twitter = "https://twitter.com/GirlWithACode";
 
     render() {
         return (
             <div className="App">
-                <MyNav name={this.name} github={this.github} linkedin={this.linkedin}/>
-                <header className="App-header Header-background">
-                    <HeaderSection name={this.name}/>
-                </header>
-                <AboutSection/>
-                <ExperienceSection/>
-                <SkillsSection/>
-                <ProjectsSection github_username={this.github_username}/>
-                <AchievementsSection/>
-                <ActivitiesSection/>
-                <ContactSection/>
-                <FooterSection linkedin={this.linkedin} github={this.github}
-                               devpost={this.devpost} twitter={this.twitter}/>
+                <Router>
+                    <MyNav name={this.name} github={this.github} linkedin={this.linkedin} devpost={this.devpost}/>
+                        <main>
+                            <Switch>
+                                <Route path="/" exact>
+                                    <HomePage/>
+                                </Route>
+                                <Route path="/projects" exact>
+                                    <ProjectsPages />
+                                </Route>
+                                <Redirect to="/"/>
+                            </Switch>
+                        </main>
+                    <FooterSection linkedin={this.linkedin} github={this.github} devpost={this.devpost} twitter={this.twitter}/>
+                </Router>
             </div>
         );
     }
