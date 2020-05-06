@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router , Route , Redirect , Switch} from 'react-router-dom';
 import '../styles/App.css';
 
@@ -6,35 +6,37 @@ import MyNav from './myNav';
 import FooterSection from './FooterSection';
 import HomePage from './HomePage';
 import ProjectsPages from './ProjectsPage';
+import ScrollToTop from './ScrollToTop';
 
-class App extends Component {
-    name = "Saloni Shivdasani";
-    linkedin = "http://linkedin.com/in/saloni-s/";
-    github = "http://github.com/SaloniSS";
-    github_username = "SaloniSS";
-    devpost = "http://devpost.com/SaloniS";
+const App = () => {
+    const name = "Saloni Shivdasani"
+    const linkedin = "http://linkedin.com/in/saloni-s/";
+    const github = "http://github.com/SaloniSS";
+    const devpost = "http://devpost.com/SaloniS";
+    const resume = "https://bit.ly/resume-saloni";
 
-    render() {
-        return (
-            <div className="App">
-                <Router>
-                    <MyNav name={this.name} github={this.github} linkedin={this.linkedin} devpost={this.devpost}/>
-                        <main>
+    return (
+        <div className="App">
+            <Router>
+                <MyNav name={name} linkedin={linkedin} github={github} devpost={devpost} resume={resume}/>
+                    <main>
+                        <ScrollToTop>
                             <Switch>
                                 <Route path="/" exact>
-                                    <HomePage/>
+                                    <HomePage name={name}/>
                                 </Route>
                                 <Route path="/projects" exact>
                                     <ProjectsPages />
                                 </Route>
                                 <Redirect to="/"/>
                             </Switch>
-                        </main>
-                    <FooterSection linkedin={this.linkedin} github={this.github} devpost={this.devpost} twitter={this.twitter}/>
-                </Router>
-            </div>
-        );
-    }
+                        </ScrollToTop>
+                    </main>
+                <FooterSection linkedin={linkedin} github={github} devpost={devpost} resume={resume}/>
+            </Router>
+        </div>
+    );
+
 }
 
 export default App;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../styles/App.css';
 
 import HeaderSection from './HeaderSection';
@@ -10,30 +10,23 @@ import SkillsSection from "./SkillsSection";
 import ExperienceSection from  './ExperienceSection';
 import ActivitiesSection from './ActivitiesSection';
 
-class HomePage extends Component {
-    name = "Saloni Shivdasani";
-    linkedin = "http://linkedin.com/in/saloni-s/";
-    github = "http://github.com/SaloniSS";
-    github_username = "SaloniSS";
-    devpost = "http://devpost.com/SaloniS";
-    twitter = "https://twitter.com/GirlWithACode";
+const HomePage = (props) => {
+    const name = props.name;
 
-    render() {
-        return (
-            <div className="App">
-                <header className="App-header Header-background">
-                    <HeaderSection name={this.name}/>
-                </header>
-                <AboutSection/>
-                <ExperienceSection/>
-                <SkillsSection/>
-                <ProjectsSection/>
-                <AchievementsSection/>
-                <ActivitiesSection/>
-                <ContactSection/>
-            </div>
-        );
-    }
-}
+    return (
+        <div className="App">
+            <header className="App-header Header-background">
+                <HeaderSection name={name}/>
+            </header>
+            <AboutSection/>
+            <ExperienceSection/>
+            <SkillsSection/>
+            <ProjectsSection/>
+            <AchievementsSection/>
+            <ActivitiesSection/>
+            <ContactSection/>
+        </div>
+    );
+};
 
 export default HomePage;

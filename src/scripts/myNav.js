@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState} from 'react';
 import { Link } from 'react-router-dom';
 import {
     Collapse,
@@ -11,56 +11,44 @@ import {
 import '../styles/MyNav.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-class MyNav extends Component {
-    constructor(props) {
-        super(props);
+const MyNav = (props) => {
+    const [isOpen , setIsOpen ] = useState(false);
+    
+    const name = props.name;
+    const linkedin = props.linkedin;
+    const github = props.github;
+    const devpost = props.devpost;
+    const resume = props.resume;
 
-        this.toggle = this.toggle.bind(this);
-        this.state = {
-            isOpen: false,
-            name: props.name,
-            linkedin: props.linkedin,
-            github: props.github,
-            devpost: props.devpost
-        };
-    }
-    toggle() {
-        this.setState({
-            isOpen: !this.state.isOpen
-        });
-    }
-    render() {
-
-        return (
-            <div>
-                <Navbar fixed="top" color="dark" expand="md">
-                    <NavbarBrand href="/">{this.state.name}</NavbarBrand>
-                    <NavbarToggler onClick={this.toggle} />
-                    <Collapse isOpen={this.state.isOpen} navbar>
-                        <Nav className="ml-auto" navbar>
-                            <NavItem>
-                                <NavLink className="bar-item" href={this.state.linkedin} target="_blank">Linkedin</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className="bar-item" href={this.state.github} target="_blank">GitHub</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className="bar-item" href={this.state.devpost} target="_blank">Portfolio</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className="bar-item" href="https://bit.ly/resume-saloni" target="_blank">Résume</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <Link to ='/projects' >
-                                    <NavLink className="bar-item" href="" target="_blank">Projects</NavLink>
-                                </Link>
-                            </NavItem>
-                        </Nav>
-                    </Collapse>
-                </Navbar>
-            </div>
-        )
-    }
-}
+    return (
+        <div>
+            <Navbar fixed="top" color="dark" expand="md">
+                <NavbarBrand href="/">{name}</NavbarBrand>
+                <NavbarToggler onClick={() => setIsOpen(!isOpen)} />
+                <Collapse isOpen={isOpen} navbar>
+                    <Nav className="ml-auto" navbar>
+                        <NavItem>
+                            <NavLink className="bar-item" href={linkedin} target="_blank">Linkedin</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink className="bar-item" href={github} target="_blank">GitHub</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink className="bar-item" href={devpost} target="_blank">Portfolio</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink className="bar-item" href={resume} target="_blank">Résume</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <Link to ='/projects' >
+                                <NavLink className="bar-item" href="" target="_blank">Projects</NavLink>
+                            </Link>
+                        </NavItem>
+                    </Nav>
+                </Collapse>
+            </Navbar>
+        </div>
+    );
+};
 
 export default MyNav;

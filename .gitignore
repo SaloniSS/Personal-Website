@@ -108,3 +108,4 @@ dist
 .firebaserc
 firebase.json
 build
+server/config/config.env
