@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const ProjectSchema = new mongoose.Schema({
+const WinningProjectSchema = new mongoose.Schema({
     portfolio: {
         type: String
     },
@@ -25,6 +25,10 @@ const ProjectSchema = new mongoose.Schema({
         required: [true, 'Please add a date']
     },
 
+    award: {
+        type: String
+    },
+
     description: {
         type: String,
         required: [true, 'Please add a description']
@@ -36,4 +40,4 @@ const ProjectSchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Project', ProjectSchema);
+module.exports = mongoose.model('WinningProject', WinningProjectSchema);
