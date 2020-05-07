@@ -22,9 +22,9 @@ const ProjectsPage = () => {
     useEffect(() => {
         async function fetchData() {
           const response = await axios('https://saloni-shivdasani.appspot.com/api/v1/projects');
-          setProjects(response.data.data);
+          setProjects(response.data.data.reverse());
           const result = await axios('https://saloni-shivdasani.appspot.com/api/v1/projects/winning-projects');
-          setWinningProjects(result.data.data);
+          setWinningProjects(result.data.data.reverse());
         }
         fetchData();
       }, []);
@@ -76,7 +76,6 @@ const ProjectsPage = () => {
         );
     };
 
-
     return (
         <div className="Projects-section">
             <div className="block-padding grey-section">
@@ -89,7 +88,7 @@ const ProjectsPage = () => {
                         </Col>
                     </Row>
                     <Row className="row-padding">
-                        { winningProjects.reverse().map(function (winningProject, i) {
+                        { winningProjects.map(function (winningProject, i) {
                             return (
                                 <WinningProjectCard project={ winningProject } key={ i }/>
                             );
