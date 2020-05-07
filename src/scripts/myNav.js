@@ -22,9 +22,9 @@ const MyNav = (props) => {
 
     return (
         <div>
-            <Navbar fixed="top" color="dark" expand="md">
-                <NavbarBrand href="/">{name}</NavbarBrand>
-                <NavbarToggler onClick={() => setIsOpen(!isOpen)} />
+            <Navbar fixed="top" color="dark" expand="md" dark>
+                <NavbarBrand href="/" >{name}</NavbarBrand>
+                <NavbarToggler onClick={() => setIsOpen(!isOpen)}/>
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ml-auto" navbar>
                         <NavItem>
