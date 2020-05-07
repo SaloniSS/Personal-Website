@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState , useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
     Container,
@@ -13,23 +13,39 @@ import '../styles/ProjectsSection.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 
+const axios = require("axios").default;
+
 const ProjectsSection = () => {
+    const [winningProjects, setWinningProjects] = useState([]);
+
+    useEffect(() => {
+        async function fetchData() {
+          const result = await axios('https://saloni-shivdasani.appspot.com/api/v1/projects/winning-projects');
+          setWinningProjects(result.data.data);
+        }
+        fetchData();
+      }, []);
     
-    const  WinningProjectCard = (project) => {
+      const WinningProjectCard = (project_info) => {
+        const project = project_info.project;
         return (
-            <Col sm={{ size: 4 }}  className="card-padding">
-                <a href={project.link} target="_blank" rel="noopener noreferrer">
-                    <Card className="project-card">
-                        <CardBody>
-                            <CardTitle>{project.title}</CardTitle>
-                            <CardTitle>{project.organization}</CardTitle>
-                            <CardText>{project.date}</CardText>
-                            <CardText> <u>Winner : {project.award}</u></CardText>
-                            <CardText>{project.description}</CardText>
-                            <CardText>{project.contribution}</CardText>
-                        </CardBody>
-                    </Card>
-                </a>
+            <Col sm={{ size: 4 }}  className="card-padding">     
+                <Card className="project-card">
+                    <CardBody>
+                        <CardTitle>{project.title}</CardTitle>
+                        <CardTitle>{project.organization}</CardTitle>
+                        <CardText>{project.date}</CardText>
+                        <CardText> <u>Winner : {project.award}</u></CardText>
+                        <CardText>{project.description}</CardText>
+                        <CardText>{project.contribution}</CardText>
+                        <CardText>More Information: 
+                            <a href={project.portfolio} target="_blank" rel="noopener noreferrer"> Click Here</a>
+                        </CardText>
+                        <CardText>Source Code: 
+                            <a href={project.code} target="_blank" rel="noopener noreferrer"> Click Here </a>
+                        </CardText>
+                    </CardBody>
+                </Card>
             </Col>
         );
     };
@@ -46,33 +62,11 @@ const ProjectsSection = () => {
                         </Col>
                     </Row>
                     <Row className="row-padding">
-                        <WinningProjectCard
-                            link="https://devpost.com/software/newtral-the-neutral-news-filter"
-                            title="Newtral - The Neutral News Filter"
-                            organization="HackUTD Fall 2019"
-                            date="Novemeber 2019"
-                            award="Sponsor Prize for Cognizant, Top 5 Overall"
-                            description="Implemented a chrome extension which scans news articles and highlights objective lines and trikes subjective lines of the article based on the emotional threshold using a custom API"
-                            contribution="Developed the back-end using Python with NLP to analyze text and create API data and GCP to host the API server"
-                        />
-                        <WinningProjectCard
-                            link="https://devpost.com/software/spacefinder"
-                            title="SpaceFinder"
-                            organization="HackUTD Spring 2019"
-                            date="February 2019"
-                            award="Third Place Overall"
-                            description="Implemented a mobile application which lets students find and check-in to empty study rooms and study groups across the campus"
-                            contribution="Developed the front-end of the web app tool using HTML, CSS and JavaScript"
-                        />
-                        <WinningProjectCard
-                            link="https://devpost.com/software/dfw-dtw"
-                            title="DFW DTW"
-                            organization="HackDFW 2019"
-                            date="February 2019"
-                            award="Sponsor Prize for Dallas Regional Chamber’s Say Yes to Dallas Campaign Challenge"
-                            description="Implemented a web tool which provides personalized recommendations in the DFW area to users based on their interests and jobs"
-                            contribution="Developed the front-end of the web tool using HTML, CSS, PHP and JavaScript"
-                        />
+                        { winningProjects.reverse().map(function (winningProject, i) {
+                            return (
+                                <WinningProjectCard project={ winningProject } key={ i }/>
+                            );
+                        })}
                     </Row>
                     <Row className="row-padding">
                         <Col sm={{ size: 6, offset: 3 }}>

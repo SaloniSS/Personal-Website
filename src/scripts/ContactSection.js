@@ -1,5 +1,5 @@
 // /src/components/ContactSection.js
-import React, { Component } from 'react';
+import React from 'react';
 import {
     Container,
     Row,
