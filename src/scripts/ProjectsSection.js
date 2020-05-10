@@ -17,15 +17,42 @@ const axios = require("axios").default;
 
 const ProjectsSection = () => {
     const [winningProjects, setWinningProjects] = useState([]);
+    const [longProjects, setLongProjects] = useState([]);
 
     useEffect(() => {
         async function fetchData() {
           const result = await axios('https://saloni-shivdasani.appspot.com/api/v1/projects/winning-projects');
           setWinningProjects(result.data.data);
+          const data = await axios('https://saloni-shivdasani.appspot.com/api/v1/projects/long-projects');
+          setLongProjects(data.data.data.reverse());
+          console.log(longProjects);
         }
         fetchData();
       }, []);
     
+      const ProjectCard = (project_info) => {
+        const project = project_info.project;
+        return (
+            <Col sm={{ size: 4 }} className="card-padding">          
+                <Card className="project-card">
+                    <CardBody>
+                        <CardTitle>{project.title}</CardTitle>
+                        <CardTitle>{project.organization}</CardTitle>
+                        <CardText>{project.date}</CardText>
+                        <CardText>{project.description}</CardText>
+                        <CardText>{project.contribution}</CardText>
+                        <CardText>More Information: 
+                            <a href={project.portfolio} target="_blank" rel="noopener noreferrer"> Click Here</a>
+                        </CardText>
+                        <CardText>Source Code: 
+                            <a href={project.code} target="_blank" rel="noopener noreferrer"> Click Here </a>
+                        </CardText>
+                    </CardBody>
+                </Card>
+            </Col>
+        );
+    };
+
       const WinningProjectCard = (project_info) => {
         const project = project_info.project;
         return (
@@ -65,6 +92,11 @@ const ProjectsSection = () => {
                         { winningProjects.reverse().map(function (winningProject, i) {
                             return (
                                 <WinningProjectCard project={ winningProject } key={ i }/>
+                            );
+                        })}
+                        { longProjects.reverse().map(function (longProject, i) {
+                            return (
+                                <ProjectCard project={ longProject } key={ i }/>
                             );
                         })}
                     </Row>

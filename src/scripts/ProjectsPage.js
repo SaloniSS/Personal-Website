@@ -18,6 +18,7 @@ const axios = require("axios").default;
 const ProjectsPage = () => {
     const [projects, setProjects] = useState([]);
     const [winningProjects, setWinningProjects] = useState([]);
+    const [longProjects, setLongProjects] = useState([]);
 
     useEffect(() => {
         async function fetchData() {
@@ -25,6 +26,8 @@ const ProjectsPage = () => {
           setProjects(response.data.data.reverse());
           const result = await axios('https://saloni-shivdasani.appspot.com/api/v1/projects/winning-projects');
           setWinningProjects(result.data.data.reverse());
+          const data = await axios('https://saloni-shivdasani.appspot.com/api/v1/projects/long-projects');
+          setLongProjects(data.data.data.reverse());
         }
         fetchData();
       }, []);
@@ -80,10 +83,24 @@ const ProjectsPage = () => {
         <div className="Projects-section">
             <div className="block-padding grey-section">
                 <Container>
+                <Row className="row-padding">
+                        <Col sm={{ size: 6, offset: 3 }}>
+                            <div>
+                                <h2>Long Term Projects</h2>
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row className="row-padding">
+                        { longProjects.reverse().map(function (longProject, i) {
+                            return (
+                                <ProjectCard project={ longProject } key={ i }/>
+                            );
+                        })}
+                    </Row>
                     <Row className="row-padding">
                         <Col sm={{ size: 6, offset: 3 }}>
                             <div>
-                                <h2>Projects</h2>
+                                <h2>Featured Projects</h2>
                             </div>
                         </Col>
                     </Row>
@@ -93,6 +110,15 @@ const ProjectsPage = () => {
                                 <WinningProjectCard project={ winningProject } key={ i }/>
                             );
                         })}
+                    </Row>
+                    <Row className="row-padding">
+                        <Col sm={{ size: 6, offset: 3 }}>
+                            <div>
+                                <h2>Other Projects</h2>
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row className="row-padding">
                         { projects.reverse().map(function (project, i) {
                             return (
                                 <ProjectCard project={ project } key={ i }/>
