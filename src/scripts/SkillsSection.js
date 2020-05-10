@@ -43,7 +43,7 @@ const SkillsSection = () => {
                             text="Java, JavaScript, Python, C++, R, HTML, CSS"/>
                         <SkillCard
                             title="Frameworks & Libraries"
-                            text="React, Node.js, Express, MongoDB, NLTK, React Native"/>
+                            text="React, Node.js, Express, MongoDB, Flask, NLTK, React Native"/>
                         <SkillCard
                             title="Cybersecurity"
                             text="Forensics, Intrusion detection, Security Operations, Network and Application Penetration Testing"/>
