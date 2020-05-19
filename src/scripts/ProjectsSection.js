@@ -22,7 +22,7 @@ const ProjectsSection = () => {
     useEffect(() => {
         async function fetchData() {
           const result = await axios('https://saloni-shivdasani.appspot.com/api/v1/projects/winning-projects');
-          setWinningProjects(result.data.data);
+          setWinningProjects(result.data.data.reverse());
           const data = await axios('https://saloni-shivdasani.appspot.com/api/v1/projects/long-projects');
           setLongProjects(data.data.data.reverse());
           console.log(longProjects);
@@ -89,12 +89,12 @@ const ProjectsSection = () => {
                         </Col>
                     </Row>
                     <Row className="row-padding">
-                        { winningProjects.reverse().map(function (winningProject, i) {
+                        { winningProjects.map(function (winningProject, i) {
                             return (
                                 <WinningProjectCard project={ winningProject } key={ i }/>
                             );
                         })}
-                        { longProjects.reverse().map(function (longProject, i) {
+                        { longProjects.map(function (longProject, i) {
                             return (
                                 <ProjectCard project={ longProject } key={ i }/>
                             );

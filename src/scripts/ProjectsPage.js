@@ -91,7 +91,7 @@ const ProjectsPage = () => {
                         </Col>
                     </Row>
                     <Row className="row-padding">
-                        { longProjects.reverse().map(function (longProject, i) {
+                        { longProjects.map(function (longProject, i) {
                             return (
                                 <ProjectCard project={ longProject } key={ i }/>
                             );
@@ -119,7 +119,7 @@ const ProjectsPage = () => {
                         </Col>
                     </Row>
                     <Row className="row-padding">
-                        { projects.reverse().map(function (project, i) {
+                        { projects.map(function (project, i) {
                             return (
                                 <ProjectCard project={ project } key={ i }/>
                             );
