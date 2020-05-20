@@ -55,6 +55,7 @@ const ActivitiesSection = () => {
                             title="Event Planner"
                             org="Women Mentoring Women in Engineering, UTD Chapter"
                             date="May 2020 - Present"
+                            text="Responsible for planning events for groups of professional and academic mentors with undergraduate women enrolled in STEM"
                         />
                         <ActivitiesCard
                             title="Mentor"
