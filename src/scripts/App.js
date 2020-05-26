@@ -13,7 +13,7 @@ const App = () => {
     const linkedin = "http://linkedin.com/in/saloni-s/";
     const github = "http://github.com/SaloniSS";
     const devpost = "http://devpost.com/SaloniS";
-    const resume = "https://drive.google.com/file/d/1jvZq5lerE9_bx5x4psrLym0xEa6SqQ88/view?usp=sharing";
+    const resume = "https://drive.google.com/file/d/1vWVW9YA-5FLISyXTg3_Y9CrgQf_mnMRr/view?usp=sharing";
 
     return (
         <div className="App">
