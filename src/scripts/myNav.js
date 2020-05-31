@@ -37,7 +37,7 @@ const MyNav = (props) => {
                             <NavLink className="bar-item" href={devpost} target="_blank">Portfolio</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink className="bar-item" href={resume} target="_blank">Résume</NavLink>
+                            <NavLink className="bar-item" href={resume} target="_blank" rel="noopener noreferrer">Résume</NavLink>
                         </NavItem>
                         <NavItem>
                             <Link to ='/projects' >
