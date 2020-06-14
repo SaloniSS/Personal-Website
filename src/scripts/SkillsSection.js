@@ -40,10 +40,10 @@ const SkillsSection = () => {
                     <Row className="row-padding">
                         <SkillCard
                             title="Computer Languages"
-                            text="Java, JavaScript, MySQL, Python, C++, R, HTML, CSS"/>
+                            text="Java, JavaScript, SQL, Python, C++, R, HTML, CSS"/>
                         <SkillCard
                             title="Frameworks & Libraries"
-                            text="React, Node.js, Express, MongoDB, Flask, NLTK, React Native"/>
+                            text="React, Node.js, Express, MongoDB, React Native, Electron, Flask, NLTK, Chrome Extension API"/>
                         <SkillCard
                             title="Cybersecurity"
                             text="Forensics, Intrusion detection, Security Operations, Network and Application Penetration Testing"/>
