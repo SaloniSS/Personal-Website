@@ -42,26 +42,27 @@ const ActivitiesSection = () => {
                         </Col>
                     </Row>
                     <Row className="row-padding">
-                        <ActivitiesCard
-                            title="Technical Lead - Cloud"
-                            org="Google Developer Students Club, UTD Chapter"
-                            date="December 2019 - Present"
-                            text="Hosting workshops on campus on topics of Google Cloud Platform and backend developement"
-                            text2="Leading and managing teams of undergraduate and graduate students 
-                            to develop projects in a team environment for the Google Solution Challenge 
-                            while enforcing Agile software development"
+                    <ActivitiesCard
+                        title="Education Officer, Mentor"
+                        org="Association of Computer Machinery, UTD Chapter"
+                        date="August 2018 - Present"
+                        text="Hosting workshops on campus on topics of general computing as part of the Technical Workshop Divison"
+                        text2="Mentoring computer science freshmen in the development of academic, social and personal skills necessary to succeed in college"
+                    />
+                    <ActivitiesCard
+                        title="Event Planner"
+                        org="Women Mentoring Women in Engineering, UTD Chapter"
+                        date="May 2020 - Present"
+                        text="Responsible for planning events for groups of professional and academic mentors with undergraduate women enrolled in STEM"
                         />
                         <ActivitiesCard
-                            title="Event Planner"
-                            org="Women Mentoring Women in Engineering, UTD Chapter"
-                            date="May 2020 - Present"
-                            text="Responsible for planning events for groups of professional and academic mentors with undergraduate women enrolled in STEM"
-                        />
-                        <ActivitiesCard
-                            title="Mentor"
-                            org="Association of Computer Machinery, UTD Chapter"
-                            date="August 2018 - Present"
-                            text="Mentoring computer science freshmen in the development of academic, social and personal skills necessary to succeed in college"
+                        title="Technical Lead - Cloud"
+                        org="Google Developer Students Club, UTD Chapter"
+                        date="December 2019 - Present"
+                        text="Hosting workshops on campus on topics of Google Cloud Platform and backend developement"
+                        text2="Leading and managing teams of undergraduate and graduate students 
+                        to develop projects in a team environment for the Google Solution Challenge 
+                        while enforcing Agile software development"
                         />
                     </Row>
                 </Container>
