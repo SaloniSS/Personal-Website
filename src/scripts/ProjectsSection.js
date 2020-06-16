@@ -21,9 +21,9 @@ const ProjectsSection = () => {
 
     useEffect(() => {
         async function fetchData() {
-          const result = await axios('https://saloni-shivdasani.appspot.com/api/v1/projects/winning-projects');
+          const result = await axios('https://saloni-shivdasani.herokuapp.com/api/v1/projects/winning-projects');
           setWinningProjects(result.data.data.reverse());
-          const data = await axios('https://saloni-shivdasani.appspot.com/api/v1/projects/long-projects');
+          const data = await axios('https://saloni-shivdasani.herokuapp.com/api/v1/projects/long-projects');
           setLongProjects(data.data.data.reverse());
           console.log(longProjects);
         }
