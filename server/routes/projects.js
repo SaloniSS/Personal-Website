@@ -1,22 +1,34 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const { getProjects, addProject } = require('../controllers/project_controller');
-const { getWinningProjects, addWinningProject } = require('../controllers/winning_project_controller');
-const { getLongProjects, addLongProject } = require('../controllers/long_project_controller');
+const {
+  getProjects,
+  addProject,
+} = require("../controllers/project_controller");
+const {
+  getWinningProjects,
+  addWinningProject,
+} = require("../controllers/winning_project_controller");
+const {
+  getLongProjects,
+  addLongProject,
+} = require("../controllers/long_project_controller");
+const {
+  getFeaturedProjects,
+  addFeaturedProject,
+} = require("../controllers/featured_project_controller");
+
+router.route("/").get(getProjects).post(addProject);
 
 router
-    .route('/')
-    .get(getProjects)
-    .post(addProject);
+  .route("/winning-projects")
+  .get(getWinningProjects)
+  .post(addWinningProject);
+
+router.route("/long-projects").get(getLongProjects).post(addLongProject);
 
 router
-    .route('/winning-projects')
-    .get(getWinningProjects)
-    .post(addWinningProject);
+  .route("/featured-projects")
+  .get(getFeaturedProjects)
+  .post(addFeaturedProject);
 
-router
-    .route('/long-projects')
-    .get(getLongProjects)
-    .post(addLongProject);
-    
 module.exports = router;
