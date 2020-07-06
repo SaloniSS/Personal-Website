@@ -8,6 +8,7 @@ import {
   CardText,
   CardBody,
   CardTitle,
+  CardLink,
   Button,
 } from "reactstrap";
 import "../styles/ProjectsSection.css";
@@ -48,65 +49,20 @@ const ProjectsPage = () => {
             <CardTitle>{project.title}</CardTitle>
             <CardTitle>{project.organization}</CardTitle>
             <CardText>{project.date}</CardText>
+            {project.award && (
+              <CardText>
+                {" "}
+                <u>Winner : {project.award}</u>{" "}
+              </CardText>
+            )}
             <CardText>{project.description}</CardText>
             <CardText>{project.contribution}</CardText>
-            <CardText>
-              More Information:
-              <a
-                href={project.portfolio}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {" "}
-                Click Here
-              </a>
-            </CardText>
-            <CardText>
-              Source Code:
-              <a href={project.code} target="_blank" rel="noopener noreferrer">
-                {" "}
-                Click Here{" "}
-              </a>
-            </CardText>
-          </CardBody>
-        </Card>
-      </Col>
-    );
-  };
-
-  const WinningProjectCard = (project_info) => {
-    const project = project_info.project;
-    return (
-      <Col sm={{ size: 4 }} className="card-padding">
-        <Card className="project-card">
-          <CardBody>
-            <CardTitle>{project.title}</CardTitle>
-            <CardTitle>{project.organization}</CardTitle>
-            <CardText>{project.date}</CardText>
-            <CardText>
-              {" "}
-              <u>Winner : {project.award}</u>
-            </CardText>
-            <CardText>{project.description}</CardText>
-            <CardText>{project.contribution}</CardText>
-            <CardText>
-              More Information:
-              <a
-                href={project.portfolio}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {" "}
-                Click Here
-              </a>
-            </CardText>
-            <CardText>
-              Source Code:
-              <a href={project.code} target="_blank" rel="noopener noreferrer">
-                {" "}
-                Click Here{" "}
-              </a>
-            </CardText>
+            <CardLink href={project.portfolio} target="_blank">
+              More Information
+            </CardLink>
+            <CardLink href={project.code} target="_blank">
+              Source Code
+            </CardLink>
           </CardBody>
         </Card>
       </Col>
@@ -138,7 +94,7 @@ const ProjectsPage = () => {
           </Row>
           <Row className="row-padding">
             {winningProjects.map(function (winningProject, i) {
-              return <WinningProjectCard project={winningProject} key={i} />;
+              return <ProjectCard project={winningProject} key={i} />;
             })}
           </Row>
           <Row className="row-padding">

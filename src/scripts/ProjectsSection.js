@@ -8,6 +8,7 @@ import {
   CardText,
   CardBody,
   CardTitle,
+  CardLink,
   Button,
 } from "reactstrap";
 import "../styles/ProjectsSection.css";
@@ -29,7 +30,7 @@ const ProjectsSection = () => {
     fetchData();
   }, [featuredProjects]);
 
-  const FeaturedProjectCard = (project_info) => {
+  const ProjectCard = (project_info) => {
     const project = project_info.project;
     return (
       <Col sm={{ size: 4 }} className="card-padding">
@@ -41,29 +42,17 @@ const ProjectsSection = () => {
             {project.award && (
               <CardText>
                 {" "}
-                <u>Winner : {project.award}</u>
+                <u>Winner : {project.award}</u>{" "}
               </CardText>
             )}
             <CardText>{project.description}</CardText>
             <CardText>{project.contribution}</CardText>
-            <CardText>
-              More Information:
-              <a
-                href={project.portfolio}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {" "}
-                Click Here
-              </a>
-            </CardText>
-            <CardText>
-              Source Code:
-              <a href={project.code} target="_blank" rel="noopener noreferrer">
-                {" "}
-                Click Here{" "}
-              </a>
-            </CardText>
+            <CardLink href={project.portfolio} target="_blank">
+              More Information
+            </CardLink>
+            <CardLink href={project.code} target="_blank">
+              Source Code
+            </CardLink>
           </CardBody>
         </Card>
       </Col>
@@ -82,8 +71,8 @@ const ProjectsSection = () => {
             </Col>
           </Row>
           <Row className="row-padding">
-            {featuredProjects.map(function (featuredProject, i) {
-              return <FeaturedProjectCard project={featuredProject} key={i} />;
+            {featuredProjects.map(function (project, i) {
+              return <ProjectCard project={project} key={i} />;
             })}
           </Row>
           <Row className="row-padding">
