@@ -16,7 +16,7 @@ import "font-awesome/css/font-awesome.min.css";
 const AchievementsSection = () => {
   const AchievementCard = (achievement) => {
     return (
-      <Col sm={{ size: 4 }} className="card-padding">
+      <Col sm={{ size: 6 }} className="card-padding">
         <Card className="achievement-card">
           <CardBody>
             <i className={achievement.icon}></i>
