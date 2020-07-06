@@ -1,8 +1,5 @@
-ACM Tutorial:\
-https://tinyurl.com/reactutd
+ACM Tutorial: https://tinyurl.com/reactutd
 
-Website:    
-http://saloni-shivdasani.firebaseapp.com/
+Website: http://saloni-shivdasani.firebaseapp.com/
 
-Source for Hosting:\
-https://medium.com/@impaachu/host-a-react-based-website-free-of-cost-with-firebase-hosting-and-connect-with-your-own-domain-53146731807f
+Server: https://github.com/SaloniSS/Personal-Website-Server
