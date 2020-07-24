@@ -3,10 +3,6 @@ on:
   push:
     branches:
       - server
-
-defaults:
-  run:
-    working-directory: ./server
     
 jobs:
   build:
@@ -15,10 +11,9 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@server
-      - name: Access Source directory
-        run: ls
       - name: Install Dependencies
         run: npm install
+        working-directory: ./server
   deploy:
     name: Deploy
     needs: build
@@ -26,8 +21,6 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@server
-      - name: Access Source directory
-        run: ls
       - name: Initialize Google Cloud SDK
         uses: zxyle/publish-gae-action@master
         with:
@@ -39,3 +32,4 @@ jobs:
           gcloud auth activate-service-account ${{ secrets.GCP_SA_EMAIL }} --key-file=client-secret.json
           gcloud config set project ${{ secrets.PROJECT_ID }}
           gcloud -q app deploy app.yaml --promote
+        working-directory: ./server
