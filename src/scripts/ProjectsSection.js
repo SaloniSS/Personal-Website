@@ -14,6 +14,7 @@ import {
 import "../styles/ProjectsSection.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
+var _ = require("lodash");
 
 const axios = require("axios").default;
 
@@ -22,10 +23,9 @@ const ProjectsSection = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const result = await axios(
-        "https://saloni-shivdasani.appspot.com/api/v1/projects/featured-projects"
-      );
-      setFeaturedProjects(result.data.data.reverse());
+      const response = await axios("http://localhost:5000/api/v1/projects/");
+      const featured = _.groupBy(response.data.data, "featured");
+      setFeaturedProjects(featured.true.reverse());
     }
     fetchData();
   }, [featuredProjects]);
