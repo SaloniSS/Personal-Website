@@ -14,6 +14,7 @@ jobs:
       - name: Access Source directory
         run: cd server
       - name: Install Dependencies
+        working-directory: ./server
         run: npm install
   deploy:
     name: Deploy
