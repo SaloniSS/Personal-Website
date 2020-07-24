@@ -25,7 +25,9 @@ const ProjectsPage = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await axios("http://localhost:5000/api/v1/projects/");
+      const response = await axios(
+        "https://saloni-shivdasani.appspot.com/api/v1/projects/"
+      );
       const categories = _.groupBy(response.data.data, "category");
       setProjects(categories.regular.reverse());
       setLongProjects(categories.long.reverse());

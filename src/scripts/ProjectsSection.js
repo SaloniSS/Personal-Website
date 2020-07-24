@@ -23,7 +23,9 @@ const ProjectsSection = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await axios("http://localhost:5000/api/v1/projects/");
+      const response = await axios(
+        "https://saloni-shivdasani.appspot.com/api/v1/projects/"
+      );
       const featured = _.groupBy(response.data.data, "featured");
       setFeaturedProjects(featured.true.reverse());
     }
