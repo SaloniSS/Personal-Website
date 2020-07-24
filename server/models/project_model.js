@@ -1,39 +1,52 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const ProjectSchema = new mongoose.Schema({
-    portfolio: {
-        type: String
-    },
+  portfolio: {
+    type: String,
+  },
 
-    code: {
-        type: String,
-        required: [true, 'Please add a link']
-    },
+  code: {
+    type: String,
+    required: [true, "Please add a link"],
+  },
 
-    title: {
-        type: String,
-        required: [true, 'Please add a title']
-    },
+  title: {
+    type: String,
+    required: [true, "Please add a title"],
+  },
 
-    organization: {
-        type: String,
-        required: [true, 'Please add an organization']
-    },
+  organization: {
+    type: String,
+    required: [true, "Please add an organization"],
+  },
 
-    date: {
-        type: String,
-        required: [true, 'Please add a date']
-    },
+  date: {
+    type: String,
+    required: [true, "Please add a date"],
+  },
 
-    description: {
-        type: String,
-        required: [true, 'Please add a description']
-    },
+  description: {
+    type: String,
+    required: [true, "Please add a description"],
+  },
 
-    contribution: {
-        type: String,
-        required: [true, 'Please add a contribution']
-    }
+  contribution: {
+    type: String,
+    required: [true, "Please add a contribution"],
+  },
+
+  award: {
+    type: String,
+  },
+
+  category: {
+    type: String,
+    required: [true, "Please add a category"],
+  },
+
+  featured: {
+    tyoe: Boolean,
+  },
 });
 
-module.exports = mongoose.model('Project', ProjectSchema);
+module.exports = mongoose.model("Project", ProjectSchema);
