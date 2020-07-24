@@ -22,7 +22,7 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
-//Test
+//Test 2
 app.get("/", (req, res) => {
   res.status(200).send("Hello, world!").end();
 });
