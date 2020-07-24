@@ -2,7 +2,7 @@ name: Build and Host
 on:
   push:
     branches:
-      - master
+      - website
 
 jobs:
   build:
