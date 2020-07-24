@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Build and Host
 on:
   push:
     branches:
@@ -14,14 +14,14 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Build
-        run: npm run build-prod
+        run: npm run build
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
           name: dist
           path: dist
-  deploy:
-    name: Deploy
+  host:
+    name: Host
     needs: build
     runs-on: ubuntu-latest
     steps:
