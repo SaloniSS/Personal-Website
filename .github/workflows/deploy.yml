@@ -4,16 +4,19 @@ on:
     branches:
       - server
 
+defaults:
+  run:
+    working-directory: ./server
+    
 jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@master
+        uses: actions/checkout@server
       - name: Access Source directory
         run: ls
-        working-directory: ./server
       - name: Install Dependencies
         run: npm install
   deploy:
@@ -22,10 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@master
-      - name: Access Source directory
-        run: ls
-        working-directory: ./server
+        uses: actions/checkout@server
       - name: Access Source directory
         run: ls
       - name: Initialize Google Cloud SDK
