@@ -23,9 +23,11 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@master
       - name: Access Source directory
-        run: cd server
+        run: |
+          ls
+          cd server
+          ls
       - name: Initialize Google Cloud SDK
-        needs: [Access Source directory]
         uses: zxyle/publish-gae-action@master
         with:
           service_account_email: ${{ secrets.GCP_SA_EMAIL }}
