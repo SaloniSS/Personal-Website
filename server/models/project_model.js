@@ -45,7 +45,8 @@ const ProjectSchema = new mongoose.Schema({
   },
 
   featured: {
-    tyoe: Boolean,
+    type: Boolean,
+    default: false,
   },
 });
 
