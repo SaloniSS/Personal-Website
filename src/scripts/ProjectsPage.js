@@ -19,7 +19,6 @@ var _ = require("lodash");
 const axios = require("axios").default;
 
 const ProjectsPage = () => {
-  console.log("projects");
   const [projects, setProjects] = useState([]);
   const [winningProjects, setWinningProjects] = useState([]);
   const [longProjects, setLongProjects] = useState([]);
@@ -27,9 +26,7 @@ const ProjectsPage = () => {
   useEffect(() => {
     async function fetchData() {
       const response = await axios("http://localhost:5000/api/v1/projects/");
-      console.log(response.data.data);
       const categories = _.groupBy(response.data.data, "category");
-      console.log(categories);
       setProjects(categories.regular.reverse());
       setLongProjects(categories.long.reverse());
       setWinningProjects(categories.winner.reverse());
@@ -39,7 +36,6 @@ const ProjectsPage = () => {
   }, []);
 
   const ProjectCard = (project_info) => {
-    console.log("Project");
     const project = project_info.project;
     return (
       <Col sm={{ size: 4 }} className="card-padding">
@@ -56,12 +52,18 @@ const ProjectsPage = () => {
             )}
             <CardText>{project.description}</CardText>
             <CardText>{project.contribution}</CardText>
-            <CardLink href={project.portfolio} target="_blank">
-              More Information
-            </CardLink>
-            <CardLink href={project.code} target="_blank">
-              Source Code
-            </CardLink>
+            {project.portfolio && (
+              <CardLink href={project.portfolio} target="_blank">
+                {" "}
+                More Information{" "}
+              </CardLink>
+            )}
+            {project.code && (
+              <CardLink href={project.code} target="_blank">
+                {" "}
+                Source Code{" "}
+              </CardLink>
+            )}
           </CardBody>
         </Card>
       </Col>
