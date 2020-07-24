@@ -25,6 +25,7 @@ jobs:
       - name: Access Source directory
         run: cd server
       - name: Initialize Google Cloud SDK
+        needs: [Access Source directory]
         uses: zxyle/publish-gae-action@master
         with:
           service_account_email: ${{ secrets.GCP_SA_EMAIL }}
