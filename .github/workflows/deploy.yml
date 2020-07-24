@@ -27,6 +27,8 @@ jobs:
           ls
           cd server
           ls
+      - name: Access Source directory
+        run: ls
       - name: Initialize Google Cloud SDK
         uses: zxyle/publish-gae-action@master
         with:
