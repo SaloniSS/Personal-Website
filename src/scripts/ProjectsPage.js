@@ -37,6 +37,7 @@ const ProjectsPage = () => {
       );
       setLongProjects(data.data.data.reverse());
     }
+    window.scrollTo(0, 0);
     fetchData();
   }, []);
 
