@@ -2,12 +2,6 @@
 
 https://saloni-shivdasani.appspot.com/api/v1/projects/
 
-https://saloni-shivdasani.appspot.com/api/v1/projects/winning-projects
-
-https://saloni-shivdasani.appspot.com/api/v1/projects/long-projects
-
-https://saloni-shivdasani.appspot.com/api/v1/projects/featured-projects
-
 ### Example Body
 
 ```
@@ -19,7 +13,9 @@ https://saloni-shivdasani.appspot.com/api/v1/projects/featured-projects
     "date": "February 2019",
     "description": "Implemented a web tool which provides personalized recommendations and optimal are of residence in the DFW area to users based on their interests, hobbies, and job",
     "contribution": "Developed the front-end of the web tool using HTML, CSS, PHP and JavaScript. Working on integrating Job Search and Apartment Search APIs to improve the usability of the app",
-    "award": "Sponsor Prize (Dallas Regional Chamber: Say Yes to Dallas"
+    "award": "Sponsor Prize (Dallas Regional Chamber: Say Yes to Dallas",
+    "category": "regular" (winner/long),
+    "featured": false
 }
 ```
 
