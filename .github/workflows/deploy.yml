@@ -12,8 +12,7 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@master
       - name: Access Source directory
-        run: |
-          ls
+        run: ls
         working-directory: ./server
       - name: Install Dependencies
         run: npm install
@@ -25,7 +24,7 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@master
       - name: Access Source directory
-        run: cd server
+        run: ls
         working-directory: ./server
       - name: Access Source directory
         run: ls
