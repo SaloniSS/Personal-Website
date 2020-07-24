@@ -12,9 +12,8 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@master
       - name: Access Source directory
-        run: cd server
-      - name: Install Dependencies
         working-directory: ./server
+      - name: Install Dependencies
         run: npm install
   deploy:
     name: Deploy
@@ -24,14 +23,10 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@master
       - name: Access Source directory
-        run: |
-          ls
-          cd server
-          ls
+        working-directory: ./server
       - name: Access Source directory
         run: ls
       - name: Initialize Google Cloud SDK
-        working-directory: ./server
         uses: zxyle/publish-gae-action@master
         with:
           service_account_email: ${{ secrets.GCP_SA_EMAIL }}
