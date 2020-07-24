@@ -1,4 +1,4 @@
-name: Build and Host
+name: Build and Deploy
 on:
   push:
     branches:
@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
+      - name: Access Source directory
+        run: cd server
       - name: Install Dependencies
         run: npm install
   deploy:
@@ -20,6 +22,8 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
+      - name: Access Source directory
+        run: cd server
       - name: Initialize Google Cloud SDK
         uses: zxyle/publish-gae-action@master
         with:
