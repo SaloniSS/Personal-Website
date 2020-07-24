@@ -12,7 +12,9 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@server
       - name: Install Dependencies
-        run: npm install
+        run: |
+          ls
+          npm install
         working-directory: ./server
   deploy:
     name: Deploy
