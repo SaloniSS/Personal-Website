@@ -14,34 +14,32 @@ import {
 import "../styles/ProjectsSection.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
+var _ = require("lodash");
 
 const axios = require("axios").default;
 
 const ProjectsPage = () => {
+  console.log("projects");
   const [projects, setProjects] = useState([]);
   const [winningProjects, setWinningProjects] = useState([]);
   const [longProjects, setLongProjects] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
-      const response = await axios(
-        "https://saloni-shivdasani.appspot.com/api/v1/projects"
-      );
-      setProjects(response.data.data.reverse());
-      const result = await axios(
-        "https://saloni-shivdasani.appspot.com/api/v1/projects/winning-projects"
-      );
-      setWinningProjects(result.data.data.reverse());
-      const data = await axios(
-        "https://saloni-shivdasani.appspot.com/api/v1/projects/long-projects"
-      );
-      setLongProjects(data.data.data.reverse());
+      const response = await axios("http://localhost:5000/api/v1/projects/");
+      console.log(response.data.data);
+      const categories = _.groupBy(response.data.data, "category");
+      console.log(categories);
+      setProjects(categories.regular.reverse());
+      setLongProjects(categories.long.reverse());
+      setWinningProjects(categories.winner.reverse());
     }
     window.scrollTo(0, 0);
     fetchData();
   }, []);
 
   const ProjectCard = (project_info) => {
+    console.log("Project");
     const project = project_info.project;
     return (
       <Col sm={{ size: 4 }} className="card-padding">
