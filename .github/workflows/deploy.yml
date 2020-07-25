@@ -34,4 +34,4 @@ jobs:
           gcloud auth activate-service-account ${{ secrets.GCP_SA_EMAIL }} --key-file=client-secret.json
           gcloud config set project ${{ secrets.PROJECT_ID }}
           gcloud -q app deploy app.yaml --promote
-          working-directory: ./server
+        working-directory: ./server
