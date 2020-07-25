@@ -109,4 +109,4 @@ dist
 firebase.json
 build
 server/config/config.env
-server/client-secret.json.json
+server/client-secret.json
