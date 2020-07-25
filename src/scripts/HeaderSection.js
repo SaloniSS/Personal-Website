@@ -7,7 +7,7 @@ const HeaderSection = (props) => {
   return (
     <div>
       <h1> Hello! </h1>
-      <h1> I am {name}! </h1>
+      <h1> My name is {name}! </h1>
     </div>
   );
 };
