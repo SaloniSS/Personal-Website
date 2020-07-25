@@ -22,5 +22,6 @@ https://saloni-shivdasani.appspot.com/api/v1/projects/
 ### Some sources and tutorials
 
 - [ACM React Tutorial](https://tinyurl.com/reactutd)
-- [Automation Tutorial for Firebase](https://github.com/marketplace/actions/github-action-for-firebase)
-- [Automation Tutorial for Github Pages](https://cmichel.io/create-react-app-github-actions/)
+- [CI for Firebase](https://github.com/marketplace/actions/github-action-for-firebase)
+- [CI for Github Pages](https://cmichel.io/create-react-app-github-actions/)
+- [CI for GCP App Engine](https://github.com/zxyle/publish-gae-action)
