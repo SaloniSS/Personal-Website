@@ -24,7 +24,7 @@ app.use(express.json());
 
 //Test 2
 app.get("/", (req, res) => {
-  res.status(200).send("Hello, world!").end();
+  res.status(200).send("Hello world!").end();
 });
 
 app.use("/api/v1/projects", projects);
