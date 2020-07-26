@@ -55,8 +55,7 @@ jobs:
 
       # Deploy App to App Engine
       - name: Publish app to Google App Engine
-        run: |
-          gcloud app deploy --quiet
+        run: gcloud config set project saloni-shivdasani && gcloud app deploy --quiet
         working-directory: ./server
       # # Example of using the output
       # - id: test
