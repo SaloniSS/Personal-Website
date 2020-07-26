@@ -23,15 +23,27 @@ jobs:
       #     gcloud config set project ${{ secrets.PROJECT_ID }}
       #     gcloud -q app deploy app.yaml --promote
       # # Setup and configure gcloud CLI
-      - name: Initialize Google Cloud SDK
-        uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
-        with:
-          version: "290.0.1"
-          project_id: ${{ secrets.PROJECT_ID }}
-          service_account_key: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS}}
 
-      # Deploy App to App Engine
-      - name: Publish app to Google App Engine
-        run: |
-          gcloud app deploy --quiet
-        working-directory: ./server
+      # - name: Initialize Google Cloud SDK
+      #   uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      #   with:
+      #     version: "290.0.1"
+      #     project_id: ${{ secrets.PROJECT_ID }}
+      #     service_account_key: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS}}
+
+      # # Deploy App to App Engine
+      # - name: Publish app to Google App Engine
+      #   run: |
+      #     gcloud app deploy --quiet
+      #   working-directory: ./server
+
+      - id: deploy
+        uses: GoogleCloudPlatform/github-actions/appengine-deploy@master
+        with:
+          credentials: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS}}
+          project_id: ${{ secrets.PROJECT_ID }}
+          deliverables: ./server/app.yaml
+
+      # Example of using the output
+      - id: test
+        run: curl "${{ steps.deploy.outputs.url }}"
