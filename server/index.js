@@ -7,7 +7,7 @@ const connectDB = require("./config/db");
 
 dotenv.config({ path: "./config/config.env" });
 
-//connectDB();
+connectDB();
 
 const projects = require("./routes/projects");
 
@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
   res.status(200).send("Hello world!").end();
 });
 
-//app.use("/api/v1/projects", projects);
+app.use("/api/v1/projects", projects);
 
 const PORT = process.env.PORT || 8000;
 
