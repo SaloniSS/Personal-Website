@@ -3,6 +3,10 @@ on:
   push:
     branches:
       - server
+env:
+  NODE_ENV: ${{ secrets.NODE_ENV }}
+  PORT: ${{ secrets.PORT }}
+  MONGO_URI: ${{ secrets.MONGO_URI }}
 
 jobs:
   deploy:
