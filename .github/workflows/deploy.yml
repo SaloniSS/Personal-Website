@@ -46,12 +46,18 @@ jobs:
           export_default_credentials: true
       # - run: gcloud config set project saloni-shivdasani && gcloud app deploy
       #   working-directory: ./server
-      - id: deploy
-        uses: GoogleCloudPlatform/github-actions/appengine-deploy@master
-        with:
-          credentials: ${{ secrets.GCP_SA_KEY}}
-          project_id: ${{ secrets.PROJECT_ID }}
-          deliverables: ./server/app.yaml
+      # - id: deploy
+      #   uses: GoogleCloudPlatform/github-actions/appengine-deploy@master
+      #   with:
+      #     credentials: ${{ secrets.GCP_SA_KEY}}
+      #     project_id: ${{ secrets.PROJECT_ID }}
+      #     deliverables: ./server/app.yaml
+
+      # Deploy App to App Engine
+      - name: Publish app to Google App Engine
+        run: |
+          gcloud app deploy --quiet
+        working-directory: ./server
       # # Example of using the output
       # - id: test
       #   run: curl "${{ steps.deploy.outputs.url }}"
