@@ -11,10 +11,7 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
-        env:
-          NODE_ENV: ${{ secrets.NODE_ENV }}
-          PORT: ${{ secrets.PORT }}
-          MONGO_URI: ${{ secrets.MONGO_URI }}
+
       # - name: Initialize Google Cloud SDK
       #   uses: zxyle/publish-gae-action@master
       #   with:
@@ -63,6 +60,10 @@ jobs:
           ls
           gcloud config set project saloni-shivdasani && gcloud app deploy
         working-directory: ./server
+        env:
+          NODE_ENV: ${{ secrets.NODE_ENV }}
+          PORT: ${{ secrets.PORT }}
+          MONGO_URI: ${{ secrets.MONGO_URI }}
       # # Example of using the output
       # - id: test
       #   run: curl "${{ steps.deploy.outputs.url }}"
