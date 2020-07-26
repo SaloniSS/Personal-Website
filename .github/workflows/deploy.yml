@@ -45,6 +45,7 @@ jobs:
           service_account_key: ${{ secrets.GCP_SA_KEY }}
           export_default_credentials: true
       - run: gcloud config set project saloni-shivdasani && gcloud app deploy
+        working-directory: ./server
       - id: deploy
         uses: GoogleCloudPlatform/github-actions/appengine-deploy@master
         with:
