@@ -24,4 +24,5 @@ https://saloni-shivdasani.appspot.com/api/v1/projects/
 - [ACM React Tutorial](https://tinyurl.com/reactutd)
 - [CI for Firebase](https://github.com/marketplace/actions/github-action-for-firebase)
 - [CI for Github Pages](https://cmichel.io/create-react-app-github-actions/)
-- [CI for GCP App Engine](https://github.com/zxyle/publish-gae-action)
+- [CI for Gcloud](https://github.com/GoogleCloudPlatform/github-actions/tree/master/setup-gcloud)
+- [CI for .env](https://github.com/SpicyPizza/create-envfile)
