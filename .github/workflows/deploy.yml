@@ -9,56 +9,24 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
+      - name: Checkout repo
         uses: actions/checkout@master
 
-      # - name: Initialize Google Cloud SDK
-      #   uses: zxyle/publish-gae-action@master
-      #   with:
-      #     service_account_email: ${{ secrets.GCP_SA_EMAIL }}
-      #     service_account_key: ${{ secrets.GCP_SA_KEY }}
-      #     project_id: ${{ secrets.PROJECT_ID }}
-      # - name: Publish app to Google App Engine
-      #   run: |
-      #     gcloud auth activate-service-account ${{ secrets.GCP_SA_EMAIL }} --key-file=client-secret.json
-      #     gcloud config set project ${{ secrets.PROJECT_ID }}
-      #     gcloud -q app deploy app.yaml --promote
-      # # Setup and configure gcloud CLI
+      - name: Create environment file
+        uses: SpicyPizza/create-envfile@v1
+        with:
+          envkey_NODE_ENV: ${{ secrets.NODE_ENV }}
+          envkey_PORT: ${{ secrets.PORT }}
+          envkey_MONGO_URI: ${{ secrets.MONGO_URI }}
+          file_name: server/config/config.env
 
-      # - name: Initialize Google Cloud SDK
-      #   uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
-      #   with:
-      #     version: "290.0.1"
-      #     project_id: ${{ secrets.PROJECT_ID }}
-      #     service_account_key: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS}}
-
-      # # Deploy App to App Engine
-      # - name: Publish app to Google App Engine
-      #   run: |
-      #     gcloud app deploy --quiet
-      #   working-directory: ./server
-
-      # - name: set up gcloud
-      #   uses: finnp/create-file-action@1.0.0
-      #   env:
-      #     FILE_NAME: "src/config.js"
-      #     FILE_DATA: "export default { KEY: 'example' }"
-
-      - name: set up gcloud
+      - name: Set up gcloud
         uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
         with:
           version: "290.0.1"
           project_id: ${{ secrets.GCP_PROJECT_ID }}
           service_account_key: ${{ secrets.GCP_SA_KEY }}
           export_default_credentials: true
-      # - run: gcloud config set project saloni-shivdasani && gcloud app deploy
-      #   working-directory: ./server
-      # - id: deploy
-      #   uses: GoogleCloudPlatform/github-actions/appengine-deploy@master
-      #   with:
-      #     credentials: ${{ secrets.GCP_SA_KEY}}
-      #     project_id: ${{ secrets.PROJECT_ID }}
-      #     deliverables: ./server/app.yaml
 
       # Deploy App to App Engine
       - name: Publish app to Google App Engine
@@ -66,10 +34,3 @@ jobs:
           ls
           gcloud config set project saloni-shivdasani && gcloud app deploy
         working-directory: ./server
-        with:
-          NODE_ENV: ${{ secrets.NODE_ENV }}
-          PORT: ${{ secrets.PORT }}
-          MONGO_URI: ${{ secrets.MONGO_URI }}
-      # # Example of using the output
-      # - id: test
-      #   run: curl "${{ steps.deploy.outputs.url }}"
