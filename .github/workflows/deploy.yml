@@ -38,6 +38,12 @@ jobs:
       #     gcloud app deploy --quiet
       #   working-directory: ./server
 
+      # - name: set up gcloud
+      #   uses: finnp/create-file-action@1.0.0
+      #   env:
+      #     FILE_NAME: "src/config.js"
+      #     FILE_DATA: "export default { KEY: 'example' }"
+
       - name: set up gcloud
         uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
         with:
@@ -60,7 +66,7 @@ jobs:
           ls
           gcloud config set project saloni-shivdasani && gcloud app deploy
         working-directory: ./server
-        env:
+        with:
           NODE_ENV: ${{ secrets.NODE_ENV }}
           PORT: ${{ secrets.PORT }}
           MONGO_URI: ${{ secrets.MONGO_URI }}
