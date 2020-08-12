@@ -18,7 +18,7 @@ const App = () => {
   const github = "http://github.com/SaloniSS";
   const devpost = "http://devpost.com/SaloniS";
   const resume =
-    "https://storage.googleapis.com/saloni-shivdasani-resume/Saloni_Shivdasani_Resume.pdf";
+    "https://storage.googleapis.com/saloni-shivdasani-resume/Saloni_Shivdasani_Resume";
 
   return (
     <div className="App">
