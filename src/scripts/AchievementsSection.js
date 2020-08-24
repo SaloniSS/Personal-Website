@@ -45,10 +45,18 @@ const AchievementsSection = () => {
           <Row className="row-padding">
             <AchievementCard
               icon="fa fa-trophy"
+              title="SANS Security Training Scholarship"
+              org="Women in Cyber Security (WiCyS), Google"
+              date="August 2020"
+              text="Placed among the top 100 recipients from more than 988 applicants nationally"
+              activities="Based on personal statements, current activities, and cybersecurity challenges on Linux, Web Attacks, Programming, and Forensics"
+            />
+            <AchievementCard
+              icon="fa fa-trophy"
               title="First Place Winner"
               org="UTD Data Science Club"
               date="February 2020"
-              text="Placed first among about 100+ participants from The University of Texas at Dallas."
+              text="Placed first among about 100+ participants from The University of Texas at Dallas"
               activities="Based on creation and completion of ANSI SQL queries at a SQL bootcamp"
             />
             <AchievementCard
