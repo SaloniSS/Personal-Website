@@ -22,7 +22,7 @@ https://saloni-shivdasani.appspot.com/api/v1/projects/
 ### Some sources and tutorials
 
 - [ACM React Tutorial](https://tinyurl.com/reactutd)
-- [CI for Firebase](https://github.com/marketplace/actions/github-action-for-firebase)
-- [CI for Github Pages](https://cmichel.io/create-react-app-github-actions/)
-- [CI for Gcloud](https://github.com/GoogleCloudPlatform/github-actions/tree/master/setup-gcloud)
-- [CI for .env](https://github.com/SpicyPizza/create-envfile)
+- [Workflow for Firebase](https://github.com/marketplace/actions/github-action-for-firebase)
+- [Workflow for Github Pages](https://cmichel.io/create-react-app-github-actions/)
+- [Workflow for Gcloud](https://github.com/GoogleCloudPlatform/github-actions/tree/master/setup-gcloud)
+- [Workflow for .env](https://github.com/SpicyPizza/create-envfile)
