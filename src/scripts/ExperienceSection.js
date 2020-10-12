@@ -22,7 +22,8 @@ const ExperienceSection = () => {
                         <CardTitle>{experience.position}</CardTitle>
                         <CardTitle>{experience.employer}</CardTitle>
                         <CardText>{experience.date}</CardText>
-                        <CardText>{experience.description}</CardText>
+                        <CardText>{experience.description1}</CardText>
+                        <CardText>{experience.description2}</CardText>
                     </CardBody>
                 </Card>
             </Col>
@@ -72,18 +73,20 @@ const ExperienceSection = () => {
                             />
                         <ExperienceCard
                             icon="fa fa-briefcase"
-                            position="Logistics Lead"
-                            employer="The University of Texas at Dallas"
-                            date = "March 2019 - August 2019"
-                            description="Responsible for planning, coordination, execution and supervision of conferences,
-                            workshops,and summer camps held on campus as a part of the Office for Computer Science
-                            Education and Outreach"/>
+                            position="Engineering Analyst"
+                            employer="Information Security Office, The University of Texas at Dallas"
+                            date = "August 2020 - Present"
+                            description1="Performing system administration tasks, such as updating and patching hosts, building servers, installing hardware, and more"
+                            description2="Developing and improving current tools and capabilities using Python, Flask, and uswgi on Linux Servers and Splunk"/>
                         <ExperienceCard
                             icon="fa fa-briefcase"
-                            position="Computer Science Instructor"
+                            position="Logistics Lead and Computer Science Instructor"
                             employer="The University of Texas at Dallas"
                             date = "February 2019 - August 2019"
-                            description="Conducted private tutoring and coding club sessions for students from elementary
+                            description1="Responsible for planning, coordination, execution and supervision of conferences,
+                            workshops,and summer camps held on campus as a part of the Office for Computer Science
+                            Education and Outreach"
+                            description2="Conducted private tutoring and coding club sessions for students from elementary
                             school to high school in topics of programming languages and introductory computer
                             science principles as a part of the Office for Computer Science Education and Outreach"/>
                     </Row>
