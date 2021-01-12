@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@master
       - name: Install Dependencies
         run: npm install
-        working-directory: ./server
+        working-directory: ./website
       - name: Build
         run: npm run build
         working-directory: ./website
