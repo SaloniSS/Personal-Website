@@ -19,7 +19,7 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: build
-          path: ./build/
+          path: ./website/build/
   host:
     name: Host
     needs: build
@@ -31,7 +31,7 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: build
-          path: ./build/
+          path: ./website/build/
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
