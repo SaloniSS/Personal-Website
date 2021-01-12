@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/HeaderSection.css";
+import Typed from "react-typed";
 
 const HeaderSection = (props) => {
   const name = props.name;
@@ -8,6 +9,17 @@ const HeaderSection = (props) => {
     <div>
       <h1> Hello! </h1>
       <h1> I am {name}! </h1>
+      <Typed
+        strings={[
+          "Cyber Security Engineer",
+          "Full Stack Developer",
+          "CTF and Hackathon Enthusiast",
+        ]}
+        typeSpeed={100}
+        backDelay={1100}
+        backSpeed={30}
+        loop
+      />
     </div>
   );
 };
