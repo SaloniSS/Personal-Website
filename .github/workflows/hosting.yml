@@ -12,13 +12,9 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@master
       - name: Install Dependencies
-        run: npm install
-        with:
-          path: ./website/build/
+        run: cd website && npm install
       - name: Build
         run: npm run build
-        with:
-          path: ./website/build/
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
