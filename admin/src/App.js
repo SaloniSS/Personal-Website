@@ -1,4 +1,5 @@
 //https://marmelab.com/react-admin/Tutorial.html
+//https://github.com/spintech-software/react-admin-auth0-example
 
 import * as React from "react";
 import { Admin, Resource, ListGuesser, EditGuesser } from "react-admin";
