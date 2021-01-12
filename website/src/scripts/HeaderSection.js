@@ -14,6 +14,7 @@ const HeaderSection = (props) => {
           "Cyber Security Engineer",
           "Full Stack Developer",
           "CTF and Hackathon Enthusiast",
+          "Software Engineer",
         ]}
         typeSpeed={100}
         backDelay={1100}
