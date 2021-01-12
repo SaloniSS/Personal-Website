@@ -1,8 +1,8 @@
 name: Build and Host
 on:
   push:
-    paths-ignore:
-      - "server/**"
+    paths:
+      - "website/**"
 
 jobs:
   build:
