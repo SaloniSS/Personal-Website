@@ -13,8 +13,12 @@ jobs:
         uses: actions/checkout@master
       - name: Install Dependencies
         run: npm install
+        with:
+          path: ./website/build/
       - name: Build
         run: npm run build
+        with:
+          path: ./website/build/
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
