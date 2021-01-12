@@ -11,7 +11,7 @@ const HeaderSection = (props) => {
       <h1> I am {name}! </h1>
       <Typed
         strings={[
-          "test9 Cyber Security Engineer",
+          "test10 Cyber Security Engineer",
           "Full Stack Developer",
           "CTF and Hackathon Enthusiast",
           "Software Engineer",
