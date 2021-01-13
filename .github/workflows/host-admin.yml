@@ -1,4 +1,4 @@
-name: Build and Host
+name: Build and Host Admin
 on:
   push:
     paths:
