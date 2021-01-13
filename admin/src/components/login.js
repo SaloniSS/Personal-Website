@@ -15,7 +15,7 @@ const LoginButton = () => {
         height: "100vh",
       }}
     >
-      <h1>Access to Authorized Individuals Only</h1>
+      <h1>Access to Authorized People Only</h1>
       <Button
         variant="contained"
         size="large"
