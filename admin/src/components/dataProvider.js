@@ -1,13 +1,13 @@
 import { fetchUtils } from "react-admin";
-import { stringify } from "query-string";
+//import { stringify } from "query-string";
 
 const apiUrl = "https://saloni-shivdasani.appspot.com/api/v1";
 const httpClient = fetchUtils.fetchJson;
 
 const dataProvider = {
   getList: (resource, params) => {
-    const { page, perPage } = params.pagination;
-    const { field, order } = params.sort;
+    // const { page, perPage } = params.pagination;
+    // const { field, order } = params.sort;
     const url = `${apiUrl}/${resource}`;
 
     console.log(url);

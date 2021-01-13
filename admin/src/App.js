@@ -4,19 +4,18 @@
 import * as React from "react";
 import { Admin, Resource } from "react-admin";
 import { ProjectList, ProjectCreate } from "./components/projects";
-import Dashboard from "./dashboard";
-import jsonServerProvider from "ra-data-json-server";
+//import jsonServerProvider from "ra-data-json-server";
 import { useAuth0 } from "@auth0/auth0-react";
 import LoginButton from "./components/login";
 import LogoutButton from "./components/logout";
 import dataProvider from "./components/dataProvider";
 
-const dataProvider1 = jsonServerProvider(
-  "https://jsonplaceholder.typicode.com"
-);
+// const dataProvider1 = jsonServerProvider(
+//   "https://jsonplaceholder.typicode.com"
+// );
 
 const App = () => {
-  const { user, isAuthenticated, isLoading } = useAuth0();
+  const { user, isAuthenticated } = useAuth0();
 
   return (
     <div>
