@@ -10,7 +10,7 @@ const dataProvider = {
     // const { field, order } = params.sort;
     const url = `${apiUrl}/${resource}`;
 
-    console.log(url);
+    console.log("Get List", url);
 
     return httpClient(url).then(({ headers, json }) => ({
       data: json.data.map((item) => {
@@ -33,32 +33,36 @@ const dataProvider = {
       data: json,
     })),
 
-  // getMany: (resource, params) => {
-  //     const query = {
-  //         filter: JSON.stringify({ id: params.ids }),
-  //     };
-  //     const url = `${apiUrl}/${resource}?${stringify(query)}`;
-  //     return httpClient(url).then(({ json }) => ({ data: json }));
-  // },
+  getMany: (resource, params) => {
+    const query = {
+      filter: JSON.stringify({ id: params.ids }),
+    };
+    const url = `${apiUrl}/${resource}?${query}`;
 
-  // getManyReference: (resource, params) => {
-  //     const { page, perPage } = params.pagination;
-  //     const { field, order } = params.sort;
-  //     const query = {
-  //         sort: JSON.stringify([field, order]),
-  //         range: JSON.stringify([(page - 1) * perPage, page * perPage - 1]),
-  //         filter: JSON.stringify({
-  //             ...params.filter,
-  //             [params.target]: params.id,
-  //         }),
-  //     };
-  //     const url = `${apiUrl}/${resource}?${stringify(query)}`;
+    console.log("Get Many", url);
+    return httpClient(url).then(({ json }) => ({ data: json }));
+  },
 
-  //     return httpClient(url).then(({ headers, json }) => ({
-  //         data: json,
-  //         total: parseInt(headers.get('content-range').split('/').pop(), 10),
-  //     }));
-  // },
+  getManyReference: (resource, params) => {
+    const { page, perPage } = params.pagination;
+    const { field, order } = params.sort;
+    const query = {
+      sort: JSON.stringify([field, order]),
+      range: JSON.stringify([(page - 1) * perPage, page * perPage - 1]),
+      filter: JSON.stringify({
+        ...params.filter,
+        [params.target]: params.id,
+      }),
+    };
+    const url = `${apiUrl}/${resource}?${query}`;
+
+    console.log("Get Many", url);
+
+    return httpClient(url).then(({ headers, json }) => ({
+      data: json,
+      total: parseInt(headers.get("content-range").split("/").pop(), 10),
+    }));
+  },
 
   // update: (resource, params) =>
   //     httpClient(`${apiUrl}/${resource}/${params.id}`, {

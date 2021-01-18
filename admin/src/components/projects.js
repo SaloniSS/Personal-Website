@@ -11,10 +11,18 @@ import {
   BooleanField,
   BooleanInput,
   SelectInput,
+  Filter,
 } from "react-admin";
 
+const ProjectFilter = (props) => (
+  <Filter {...props}>
+    <TextInput label="Title" source="title" />
+    <BooleanInput label="Featured" source="featured" />
+  </Filter>
+);
+
 export const ProjectList = (props) => (
-  <List {...props}>
+  <List filters={<ProjectFilter />} {...props}>
     <Datagrid>
       {/* <TextField source="id" /> */}
       <TextField source="title" />
