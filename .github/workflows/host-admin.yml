@@ -14,6 +14,13 @@ jobs:
       - name: Install Dependencies
         run: npm install
         working-directory: ./admin
+      - name: Create environment file
+      uses: SpicyPizza/create-envfile@v1
+      with:
+        envkey_REACT_APP_ACCOUNT: ${{ secrets.REACT_APP_ACCOUNT }}
+        envkey_REACT_APP_AUTH_DOMAIN: ${{ secrets.REACT_APP_AUTH_DOMAIN }}
+        envkey_REACT_APP_AUTH_CLIENT: ${{ secrets.REACT_APP_AUTH_CLIENT }}
+        file_name: admin/.env
       - name: Build
         run: npm run build
         working-directory: ./admin
