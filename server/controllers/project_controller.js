@@ -216,7 +216,6 @@ exports.updateProject = async (req, res, next) => {
 
 //TODO: Update records
 
-//TODO: Delete a record
 exports.deleteProject = async (req, res, next) => {
   try {
     const project = await Project.findById(req.params.id);
