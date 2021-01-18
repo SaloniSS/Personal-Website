@@ -28,10 +28,22 @@ const dataProvider = {
     // }));
   },
 
-  getOne: (resource, params) =>
-    httpClient(`${apiUrl}/${resource}/${params.id}`).then(({ json }) => ({
-      data: json,
-    })),
+  getOne: (resource, params) => {
+    const url = `${apiUrl}/${resource}/${params.id}`;
+
+    const result = httpClient(url).then(({ json }) => ({
+      data: [json.data].map((item) => {
+        item.id = item._id;
+        delete item._id;
+        delete item.__v;
+        return item;
+      })[0],
+    }));
+    return result;
+    // return httpClient(url).then(({ json }) => ({
+    //   data: json.data,
+    // }));
+  },
 
   getMany: (resource, params) => {
     const query = {
@@ -64,11 +76,23 @@ const dataProvider = {
     }));
   },
 
-  // update: (resource, params) =>
-  //     httpClient(`${apiUrl}/${resource}/${params.id}`, {
-  //         method: 'PUT',
-  //         body: JSON.stringify(params.data),
-  //     }).then(({ json }) => ({ data: json })),
+  update: (resource, params) => {
+    const result = httpClient(`${apiUrl}/${resource}/${params.id}`, {
+      method: "PATCH",
+      body: JSON.stringify(params.data),
+    }).then(({ json }) => ({
+      data: [json.data].map((item) => {
+        item.id = item._id;
+        delete item._id;
+        delete item.__v;
+        return item;
+      })[0],
+    }));
+
+    console.log(result);
+
+    return result;
+  },
 
   // updateMany: (resource, params) => {
   //     const query = {
@@ -88,10 +112,22 @@ const dataProvider = {
       data: { ...params.data, id: json.id },
     })),
 
-  // delete: (resource, params) =>
-  //     httpClient(`${apiUrl}/${resource}/${params.id}`, {
-  //         method: 'DELETE',
-  //     }).then(({ json }) => ({ data: json })),
+  delete: (resource, params) => {
+    const result = httpClient(`${apiUrl}/${resource}/${params.id}`, {
+      method: "DELETE",
+    }).then(({ json }) => ({
+      data: [json.data].map((item) => {
+        item.id = item._id;
+        delete item._id;
+        delete item.__v;
+        return item;
+      })[0],
+    }));
+
+    console.log(result);
+
+    return result;
+  },
 
   // deleteMany: (resource, params) => {
   //     const query = {

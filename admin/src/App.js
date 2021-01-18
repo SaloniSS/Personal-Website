@@ -3,7 +3,12 @@
 
 import * as React from "react";
 import { Admin, Resource } from "react-admin";
-import { ProjectList, ProjectCreate } from "./components/projects";
+import {
+  ProjectList,
+  ProjectCreate,
+  ProjectEdit,
+  ProjectShow,
+} from "./components/projects";
 import jsonServerProvider from "ra-data-json-server";
 import { useAuth0 } from "@auth0/auth0-react";
 import LoginButton from "./components/login";
@@ -40,6 +45,8 @@ const App = () => {
               name="projects"
               list={ProjectList}
               create={ProjectCreate}
+              edit={ProjectEdit}
+              show={ProjectShow}
             />
           </Admin>
           <LogoutButton />
