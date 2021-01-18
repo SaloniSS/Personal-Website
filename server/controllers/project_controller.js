@@ -2,7 +2,9 @@ const Project = require("../models/project_model");
 
 exports.getProjects = async (req, res, next) => {
   try {
-    if (req.query) {
+    console.log(req.query);
+
+    if (req.query.filter) {
       const query = JSON.parse(req.query.filter.replace("id", "_id"));
       console.log(query);
       const projects = await Project.find(query);
