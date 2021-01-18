@@ -9,7 +9,7 @@ const AboutSection = () => {
     return (
       <div>
         <h4>
-          I am a junior at The University of Texas at Dallas, and I am currently
+          I am a senior at The University of Texas at Dallas, and I am currently
           majoring in Software Engineering with a concentration in Information
           Assurance. I am interested and have experience in full stack
           development, cloud computing, and cybersecurity. I hope to find

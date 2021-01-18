@@ -45,6 +45,14 @@ const AchievementsSection = () => {
           <Row className="row-padding">
             <AchievementCard
               icon="fa fa-trophy"
+              title="Gold Bracket Competitor"
+              org="Nation Cyber League Fall 2020, Cyber Skyline"
+              date="August 2020"
+              text="Placed among the top 15% competitors from more than 6500 applicants nationally"
+              activities="Based on Open Source Intelligence,  Cryptography, Password Cracking, Log and Network Traffic Analysis, Forensics, Web Application Exploitation, and Wireless Access Exploitation"
+            />
+            <AchievementCard
+              icon="fa fa-trophy"
               title="SANS Security Training Scholarship"
               org="Women in Cyber Security (WiCyS), Google"
               date="August 2020"
