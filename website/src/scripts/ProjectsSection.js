@@ -21,16 +21,25 @@ const axios = require("axios").default;
 const ProjectsSection = () => {
   const [featuredProjects, setFeaturedProjects] = useState([]);
 
-  useEffect(() => {
-    async function fetchData() {
-      const response = await axios(
-        "https://saloni-shivdasani.appspot.com/api/v1/projects/"
-      );
-      const featured = _.groupBy(response.data.data, "featured");
-      setFeaturedProjects(featured.true.reverse());
-    }
-    fetchData();
-  }, [featuredProjects]);
+  async function fetchData() {
+    const response = await axios(
+      "https://saloni-shivdasani.appspot.com/api/v1/projects/"
+    );
+    const featured = _.groupBy(response.data.data, "featured");
+    setFeaturedProjects(featured.true.reverse());
+  }
+  fetchData();
+
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     const response = await axios(
+  //       "https://saloni-shivdasani.appspot.com/api/v1/projects/"
+  //     );
+  //     const featured = _.groupBy(response.data.data, "featured");
+  //     setFeaturedProjects(featured.true.reverse());
+  //   }
+  //   fetchData();
+  // }, [featuredProjects]);
 
   const ProjectCard = (project_info) => {
     const project = project_info.project;
