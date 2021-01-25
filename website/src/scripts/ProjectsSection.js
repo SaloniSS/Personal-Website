@@ -30,7 +30,7 @@ const ProjectsSection = () => {
       setFeaturedProjects(featured.true.reverse());
     }
     fetchData();
-  }, [featuredProjects]);
+  }, []);
 
   const ProjectCard = (project_info) => {
     const project = project_info.project;
