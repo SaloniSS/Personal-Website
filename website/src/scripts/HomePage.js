@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "../styles/App.css";
 
 import HeaderSection from "./HeaderSection";
@@ -10,12 +10,8 @@ import SkillsSection from "./SkillsSection";
 import ExperienceSection from "./ExperienceSection";
 import ActivitiesSection from "./ActivitiesSection";
 
-var _ = require("lodash");
-const axios = require("axios").default;
-
 const HomePage = (props) => {
   const name = props.name;
-  const [featuredProjects, setFeaturedProjects] = useState([]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
