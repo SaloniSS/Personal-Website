@@ -6,11 +6,23 @@ const HeaderSection = (props) => {
   const name = props.name;
 
   return (
-    <div>
+    <div
+      style={{
+        backgroundColor: "white",
+        opacity: "25%",
+        padding: "15px",
+        borderRadius: "15px",
+        color: "black",
+      }}
+    >
       <h1> Hello! </h1>
       <h1> I am {name}! </h1>
       <Typed
         strings={[
+          "They/Them",
+          "Lesbian",
+          "Genderqueer",
+          "Femme Non-binary",
           "Cyber Security Engineer",
           "Full Stack Developer",
           "CTF and Hackathon Enthusiast",
