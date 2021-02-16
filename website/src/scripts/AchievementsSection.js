@@ -32,7 +32,7 @@ const AchievementsSection = () => {
   };
 
   return (
-    <div className="achievements-section">
+    <div className="dark-bkg">
       <div className="block-padding grey-section">
         <Container>
           <Row className="row-padding">

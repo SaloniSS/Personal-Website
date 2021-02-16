@@ -22,7 +22,7 @@ const AboutSection = () => {
   };
 
   return (
-    <div className="about-section">
+    <div className="dark-bkg">
       <div className="block-padding grey-section">
         <Container>
           <Row className="row-padding">

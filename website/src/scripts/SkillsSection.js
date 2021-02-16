@@ -27,7 +27,7 @@ const SkillsSection = () => {
   };
 
   return (
-    <div className="skills-section">
+    <div className="dark-bkg">
       <div className="block-padding grey-section">
         <Container>
           <Row className="row-padding">
