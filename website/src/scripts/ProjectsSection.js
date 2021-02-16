@@ -62,7 +62,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <div className="Projects-section">
+    <div className="bkg">
       <div className="block-padding grey-section">
         <Container>
           <Row className="row-padding">

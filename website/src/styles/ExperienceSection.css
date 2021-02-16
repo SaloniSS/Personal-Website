@@ -1,56 +1,105 @@
 h2 {
-    font-family: Raleway, sans-serif;
-    font-weight: 800;
-    font-size: 30px;
-    letter-spacing: 5px;
-    display: block;
-    text-transform: uppercase;
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  letter-spacing: 5px;
+  display: block;
+  text-transform: uppercase;
 }
 
 h4 {
-    font-family: Raleway, "Times New Roman", Times, sans-serif;
-    font-style: normal;
-    font-size: 18px;
-    color: grey;
+  font-family: Raleway, "Times New Roman", Times, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  color: grey;
 }
 
 .card-title {
-    color: black;
-    font-size: 22px;
+  color: black;
+  font-size: 22px;
 }
 
 CardDate {
-    color: darkgray;
+  color: darkgray;
 }
 
 .card-text {
-    color: grey;
+  color: grey;
 }
 
 .experience-section {
-    background-color: white;
-    padding-top: 50px;
-    padding-bottom: 50px;
+  background-color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .card-body {
-    padding-top: 50px;
-    padding-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .row-padding {
-    padding-top: 25px;
-    padding-bottom: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 i {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 .card-padding {
-    padding: 15px 15px 15px 15px;
+  padding: 15px 15px 15px 15px;
+}
+
+.bkg {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.bkg::before {
+  content: "";
+  background-image: linear-gradient(
+    45deg,
+    #86007d 8.33%,
+    #0000f9 8.33%,
+    #0000f9 16.67%,
+    #008018 16.67%,
+    #008018 25%,
+    #ffff41 25%,
+    #ffff41 33.33%,
+    #ffa52c 33.33%,
+    #ffa52c 41.67%,
+    #ff0018 41.67%,
+    #ff0018 50%,
+    #86007d 50%,
+    #86007d 58.33%,
+    #0000f9 58.33%,
+    #0000f9 66.67%,
+    #008018 66.67%,
+    #008018 75%,
+    #ffff41 75%,
+    #ffff41 83.33%,
+    #ffa52c 83.33%,
+    #ffa52c 91.67%,
+    #ff0018 91.67%,
+    #ff0018 100%
+  );
+  background-size: 500px 500px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.1;
+  -webkit-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -o-background-size: 500px 500px;
 }

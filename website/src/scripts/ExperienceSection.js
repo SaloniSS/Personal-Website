@@ -51,7 +51,7 @@ const ExperienceSection = () => {
   };
 
   return (
-    <div className="experience-section">
+    <div className="bkg">
       <div className="block-padding grey-section">
         <Container>
           <Row className="row-padding">
