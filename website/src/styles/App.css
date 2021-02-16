@@ -13,9 +13,23 @@
 }
 
 .Header-background {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Header-background::before {
+  content: "";
   background-image: url(../data/gay.jpg);
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
 }

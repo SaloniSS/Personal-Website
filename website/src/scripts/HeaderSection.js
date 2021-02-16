@@ -9,7 +9,7 @@ const HeaderSection = (props) => {
     <div
       style={{
         backgroundColor: "white",
-        opacity: "25%",
+        opacity: "75%",
         padding: "15px",
         borderRadius: "15px",
         color: "black",
