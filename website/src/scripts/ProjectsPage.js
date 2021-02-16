@@ -73,13 +73,13 @@ const ProjectsPage = () => {
   };
 
   return (
-    <div className="Projects-section">
+    <div className="Projects-section bkg">
       <div className="block-padding grey-section">
         <Container>
           <Row className="row-padding">
             <Col sm={{ size: 6, offset: 3 }}>
               <div>
-                <h2>Long Term Projects</h2>
+                <h2 style={{ opacity: "100%" }}>Long Term Projects</h2>
               </div>
             </Col>
           </Row>
