@@ -8,6 +8,7 @@ import ContactSection from "./ContactSection";
 import AchievementsSection from "./AchievementsSection";
 import SkillsSection from "./SkillsSection";
 import ExperienceSection from "./ExperienceSection";
+import EducationSection from "./EducationSection";
 import ActivitiesSection from "./ActivitiesSection";
 
 const HomePage = (props) => {
@@ -23,6 +24,7 @@ const HomePage = (props) => {
         <HeaderSection name={name} />
       </header>
       <AboutSection />
+      <EducationSection />
       <ExperienceSection />
       <SkillsSection />
       <ProjectsSection />
