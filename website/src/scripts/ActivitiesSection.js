@@ -16,7 +16,7 @@ import "font-awesome/css/font-awesome.min.css";
 const ActivitiesSection = () => {
   const ActivitiesCard = (activity) => {
     return (
-      <Col sm={{ size: 4 }} className="card-padding">
+      <Col sm={{ size: 6 }} className="card-padding">
         <Card className="achievement-card">
           <CardBody>
             <CardTitle>{activity.org}</CardTitle>
@@ -47,23 +47,26 @@ const ActivitiesSection = () => {
               title="Education Officer, Developer, Mentor"
               org="Association of Computer Machinery, UTD Chapter"
               date="August 2018 - Present"
-              text="Hosting workshops on campus on topics of general computing as part of the Technical Workshop Divison"
-              text2="Mentoring computer science freshmen in the development of academic, social and personal skills necessary to succeed in college"
-            />
-            <ActivitiesCard
-              title="Event Planner"
-              org="Women Mentoring Women in Engineering, UTD Chapter"
-              date="May 2020 - Present"
-              text="Responsible for planning events for groups of professional and academic mentors with undergraduate women enrolled in STEM"
+              text="Hosting workshops on campus on topics of general computing and personal development for an audience of 150+ students"
+              text2="Organizing events and mentoring freshmen in the development of academic, social and personal skills necessary to succeed in college"
             />
             <ActivitiesCard
               title="Technical Lead - Cloud"
               org="Google Developer Students Club, UTD Chapter"
               date="December 2019 - Present"
-              text="Hosting workshops on campus on topics of Google Cloud Platform and backend developement"
-              text2="Leading and managing teams of undergraduate and graduate students 
-                        to develop projects in a team environment for the Google Solution Challenge 
-                        while enforcing Agile software development"
+              text="Hosting workshops on campus on topics of Google Cloud Platform as well as general computing for an audience of 100+ students"
+              text2="Managed teams of 25 students to develop 6 projects for the global Google Solution Challenge while enforcing Agile development"
+            />
+            <ActivitiesCard
+              title="Historian"
+              org="Queer and Trans People of Color, UTD Chapter"
+              date="April 2021 - Present"
+            />
+            <ActivitiesCard
+              title="Event Planner"
+              org="Women Mentoring Women in Engineering, UTD Chapter"
+              date="May 2020 - December 2020"
+              text="Responsible for planning events for groups of professional and academic mentors with undergraduate women enrolled in STEM"
             />
           </Row>
         </Container>
