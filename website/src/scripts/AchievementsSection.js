@@ -48,58 +48,6 @@ const AchievementsSection = () => {
             {achievements.map((value, index) => {
               return <AchievementCard achievement={value} />;
             })}
-            {/* <AchievementCard
-              icon="fa fa-trophy"
-              title="Gold Bracket Competitor"
-              org="Nation Cyber League Fall 2020, Cyber Skyline"
-              date="August 2020"
-              text="Placed among the top 15% competitors from more than 6500 applicants nationally"
-              activities="Based on Open Source Intelligence,  Cryptography, Password Cracking, Log and Network Traffic Analysis, Forensics, Web Application Exploitation, and Wireless Access Exploitation"
-            />
-            <AchievementCard
-              icon="fa fa-trophy"
-              title="SANS Security Training Scholarship"
-              org="Women in Cyber Security (WiCyS), Google"
-              date="August 2020"
-              text="Placed among the top 100 recipients from more than 988 applicants nationally"
-              activities="Based on personal statements, current activities, and cybersecurity challenges on Linux, Web Attacks, Programming, and Forensics"
-            />
-            <AchievementCard
-              icon="fa fa-trophy"
-              title="First Place Winner"
-              org="UTD Data Science Club"
-              date="February 2020"
-              text="Placed first among about 100+ participants from The University of Texas at Dallas"
-              activities="Based on creation and completion of ANSI SQL queries at a SQL bootcamp"
-            />
-            <AchievementCard
-              icon="fa fa-trophy"
-              title="National Quarter-Finalist"
-              org="Cyber Fast-Track Game, SANS Institute"
-              date="May 2019"
-              text="Placed among the top 2,400 quarter-finalists from more than 13,000 participants
-                            nationally and top 9 from 62 participants from The University of Texas at Dallas."
-              activities="Based on cybersecurity challenges on Forensics, Intrusion detection, Security operations, System and network penetration testing, and Application penetration testing."
-            />
-            <AchievementCard
-              icon="fa fa-university"
-              title="Collegium V Honors Program"
-              org="Hobson Wildenthal Honors College, The University of Texas at Dallas"
-              date="August 2018 - Present"
-              text="A selective honors program based on high school achievements, standardized
-                            test scores, personal statements and letters of recommendation."
-              activities="Activities include: Enroll in challenging classes with intensive coursework, 
-                            participate in roundtables, volunteer at events and attend performing arts events."
-            />
-            <AchievementCard
-              icon="fa fa-university"
-              title="Academic Excellence Scholar"
-              org="The University of Texas at Dallas"
-              date="August 2018 - Present"
-              text="Received full tuition scholarship along with $1000 stipend per semester based on 
-                            high school achievements, standardized test scores, personal statements and 
-                            letters of recommendation."
-            /> */}
           </Row>
         </Container>
       </div>
