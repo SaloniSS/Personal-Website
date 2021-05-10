@@ -15,7 +15,7 @@ import "font-awesome/css/font-awesome.min.css";
 const SkillsSection = () => {
   const SkillCard = (skills) => {
     return (
-      <Col sm={{ size: 3 }} className="card-padding">
+      <Col sm={{ size: skills.size }} className="card-padding">
         <Card className="skills-card">
           <CardBody>
             <CardTitle>{skills.title}</CardTitle>
@@ -40,17 +40,24 @@ const SkillsSection = () => {
           <Row className="row-padding">
             <SkillCard
               title="Computer Languages"
-              text="Java, JavaScript, SQL, Python, C++, R, HTML, CSS"
+              text="Python, JavaScript, Java, SQL, C++, R, HTML, CSS"
+              size="4"
             />
             <SkillCard
               title="Frameworks & Libraries"
-              text="React, Node.js, Express, MongoDB, React Native, Electron, Flask, NLTK, Chrome Extension API"
+              text="React, Flask, Node.js, Express, MongoDB, React Native, Flutter, Electron, Hadoop, Spark"
+              size="4"
+            />
+            <SkillCard
+              title="DevOps"
+              text="GIT, Google Cloud Platform, Firebase, Amazon Web Services"
+              size="4"
             />
             <SkillCard
               title="Cybersecurity"
               text="Open Source Intelligence, Cryptography, Password Cracking, Log Analysis, Network Traffic Analysis, Forensics, Intrusion Detection, Security Operations, Network and Application Penetration Testing, Wireless Access Exploitation, Scanning, Web Application Exploitation, Enumeration and Exploitation"
+              size="12"
             />
-            <SkillCard title="DevOps" text="Git, GCP, Firebase, AWS" />
           </Row>
         </Container>
       </div>
