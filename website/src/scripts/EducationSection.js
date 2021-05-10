@@ -34,9 +34,13 @@ const EducationSection = () => {
                   <CardText>Graduating December 2021</CardText>
                   <CardText>Concentration : Information Assurance</CardText>
                   <CardText>
-                    Collegium V Scholar, Hobson Wildenthal Honors College
+                    Honors: Academic Excellence Scholar, Collegium V Honors
+                    Program
                   </CardText>
-                  <CardText>Academic Excellence Scholar</CardText>
+                  <CardText>
+                    Fast Track Program: Taking master's level courses with
+                    automatic admission and matriculation to graduate program
+                  </CardText>
                 </CardBody>
               </Card>
             </Col>
