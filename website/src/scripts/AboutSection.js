@@ -26,7 +26,7 @@ const AboutSection = () => {
       <div className="block-padding grey-section">
         <Container>
           <Row className="row-padding">
-            <Col sm={{ size: 6, offset: 3 }}>
+            <Col sm={{ size: 12, offset: 0 }}>
               <div>
                 <h2>About Me</h2>
               </div>
