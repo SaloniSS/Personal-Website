@@ -12,9 +12,11 @@ import {
 import "../styles/AchievementsSection.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
+import achievements from "../data/achievements.json";
 
 const AchievementsSection = () => {
-  const AchievementCard = (achievement) => {
+  const AchievementCard = (props) => {
+    const achievement = props.achievement;
     return (
       <Col sm={{ size: 4 }} className="card-padding">
         <Card className="achievement-card">
@@ -43,7 +45,10 @@ const AchievementsSection = () => {
             </Col>
           </Row>
           <Row className="row-padding">
-            <AchievementCard
+            {achievements.map((value, index) => {
+              return <AchievementCard achievement={value} />;
+            })}
+            {/* <AchievementCard
               icon="fa fa-trophy"
               title="Gold Bracket Competitor"
               org="Nation Cyber League Fall 2020, Cyber Skyline"
@@ -94,7 +99,7 @@ const AchievementsSection = () => {
               text="Received full tuition scholarship along with $1000 stipend per semester based on 
                             high school achievements, standardized test scores, personal statements and 
                             letters of recommendation."
-            />
+            /> */}
           </Row>
         </Container>
       </div>
