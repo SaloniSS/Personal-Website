@@ -8,13 +8,13 @@ import {
   CardBody,
   CardTitle,
 } from "reactstrap";
-import "../styles/ExperienceSection.css";
+import "../styles/EducationSection.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 
 const EducationSection = () => {
   return (
-    <div className="experience-section">
+    <div className="education-section">
       <div className="block-padding grey-section">
         <Container>
           <Row className="row-padding">
