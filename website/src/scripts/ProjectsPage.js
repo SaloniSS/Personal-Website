@@ -14,28 +14,14 @@ import {
 import "../styles/ProjectsSection.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
+import projects from "../data/projects.json";
 var _ = require("lodash");
 
-const axios = require("axios").default;
-
 const ProjectsPage = () => {
-  const [projects, setProjects] = useState([]);
-  const [winningProjects, setWinningProjects] = useState([]);
-  const [longProjects, setLongProjects] = useState([]);
-
-  useEffect(() => {
-    async function fetchData() {
-      const response = await axios(
-        "https://saloni-shivdasani.appspot.com/api/v1/projects/"
-      );
-      const categories = _.groupBy(response.data.data, "category");
-      setProjects(categories.regular.reverse());
-      setLongProjects(categories.long.reverse());
-      setWinningProjects(categories.winner.reverse());
-    }
-    window.scrollTo(0, 0);
-    fetchData();
-  }, []);
+  const categories = _.groupBy(projects, "category");
+  const regularProjects = categories.regular.reverse();
+  const winningProjects = categories.winner.reverse();
+  const longProjects = categories.long.reverse();
 
   const ProjectCard = (project_info) => {
     const project = project_info.project;
@@ -108,7 +94,7 @@ const ProjectsPage = () => {
             </Col>
           </Row>
           <Row className="row-padding">
-            {projects.map(function (project, i) {
+            {regularProjects.map(function (project, i) {
               return <ProjectCard project={project} key={i} />;
             })}
           </Row>
@@ -116,7 +102,7 @@ const ProjectsPage = () => {
             <Col sm={{ size: 6, offset: 3 }}>
               <div>
                 <Link to="/">
-                  <Button href="">Home >>> </Button>
+                  <Button href="">Home &gt;&gt;&gt; </Button>
                 </Link>
               </div>
             </Col>
