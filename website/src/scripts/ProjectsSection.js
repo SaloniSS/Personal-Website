@@ -14,23 +14,11 @@ import {
 import "../styles/ProjectsSection.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
+import projects from "../data/projects.json";
 var _ = require("lodash");
 
-const axios = require("axios").default;
-
 const ProjectsSection = () => {
-  const [featuredProjects, setFeaturedProjects] = useState([]);
-
-  useEffect(() => {
-    async function fetchData() {
-      const response = await axios(
-        "https://saloni-shivdasani.appspot.com/api/v1/projects/"
-      );
-      const featured = _.groupBy(response.data.data, "featured");
-      setFeaturedProjects(featured.true.reverse());
-    }
-    fetchData();
-  }, []);
+  const featuredProjects = _.groupBy(projects, "featured").true.reverse();
 
   const ProjectCard = (project_info) => {
     const project = project_info.project;
@@ -81,7 +69,7 @@ const ProjectsSection = () => {
             <Col sm={{ size: 6, offset: 3 }}>
               <div>
                 <Link to="/projects">
-                  <Button href="">More Projects >>> </Button>
+                  <Button href="">More Projects &gt;&gt;&gt; </Button>
                 </Link>
               </div>
             </Col>
